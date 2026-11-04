@@ -59,3 +59,7 @@
 .example .allocation-summary strong{font-size:13px;color:#f3e5b6}
 .example .example-figure{margin-top:2px}
 @media(max-width:760px){.example .allocation-summary{display:flex;margin-bottom:14px}.example .allocation-summary strong{display:block}}
+
+/* Allocation is the first information section after each hero. */
+.allocation-overview .section-head{margin-bottom:25px}
+.allocation-overview .step{min-height:172px}
