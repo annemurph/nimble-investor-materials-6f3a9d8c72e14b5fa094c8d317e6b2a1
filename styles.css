@@ -11,11 +11,14 @@
 
 /* Persona cards: shared Nimble green with quiet, audience-specific imagery. */
 .hub-card{position:relative;isolation:isolate;overflow:hidden}
-.hub-card::before{content:"";position:absolute;inset:0;z-index:-1;background:url("property-owner-hero.png") 74% center/cover no-repeat;opacity:.08}
+.hub-card::before{content:"";position:absolute;inset:0;z-index:-1;background:url("property-owner-hero.png") 74% center/cover no-repeat;opacity:.4}
 .hub-card.dark{background:#20483c;color:#fff;border-color:#20483c}
-.hub-card.dark::before{background-image:url("capital-investor-hero.png");background-position:70% center;opacity:.12}
+.hub-card.dark::before{background-image:none;opacity:0}
 .hub-card.dark p{color:#d6e0d9}
 .hub-card>*{position:relative;z-index:1}
+
+/* Ensure the logo/header has no rule, underline or shadow beneath it. */
+.header,.brand{border-bottom:0!important;box-shadow:none!important;text-decoration:none!important}
 
 /* Refined Nimble campaign system */
 :root{--paper:#f7f5ee;--ink:#253b32;--forest:#183c31;--green:#7d9d77;--gold:#b99858;--line:#dedfd7;--muted:#6f7c74;--panel:#fffdf8;--tint:#edf1e9;--accent:#78956f;--shadow:0 22px 54px #1b38240b}
