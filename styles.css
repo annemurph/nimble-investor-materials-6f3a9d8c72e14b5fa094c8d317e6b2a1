@@ -17,6 +17,8 @@
 .hub-card.dark p{color:#d6e0d9}
 .hub-card>*{position:relative;z-index:1}
 .hub-card:not(.dark)::before{left:auto;width:64%;background-size:cover;background-position:center;opacity:.4;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 42%);mask-image:linear-gradient(to right,transparent 0,#000 42%)}
+.hub-card:not(.dark)::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(to right,rgba(255,253,248,.98) 0%,rgba(255,253,248,.94) 48%,rgba(255,253,248,.66) 66%,transparent 84%);pointer-events:none}
+.hub-card:not(.dark)>*{z-index:2}
 
 /* Ensure the logo/header has no rule, underline or shadow beneath it. */
 .header,.brand{border-bottom:0!important;box-shadow:none!important;text-decoration:none!important}
