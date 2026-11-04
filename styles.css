@@ -19,6 +19,7 @@
 
 /* Ensure the logo/header has no rule, underline or shadow beneath it. */
 .header,.brand{border-bottom:0!important;box-shadow:none!important;text-decoration:none!important}
+.brand-logo{clip-path:inset(0 0 2px 0)}
 
 /* Refined Nimble campaign system */
 :root{--paper:#f7f5ee;--ink:#253b32;--forest:#183c31;--green:#7d9d77;--gold:#b99858;--line:#dedfd7;--muted:#6f7c74;--panel:#fffdf8;--tint:#edf1e9;--accent:#78956f;--shadow:0 22px 54px #1b38240b}
