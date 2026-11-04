@@ -63,3 +63,7 @@
 /* Allocation is the first information section after each hero. */
 .allocation-overview .section-head{margin-bottom:25px}
 .allocation-overview .step{min-height:172px}
+
+/* Keep anchored sections clear of the sticky navigation and fit small screens. */
+#allocation{scroll-margin-top:90px}
+@media(max-width:380px){.brand-logo{width:124px}.header{padding-right:12px}.nav{gap:0}.nav-cta{padding:8px 9px;font-size:11px;white-space:nowrap}}
