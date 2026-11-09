@@ -20,6 +20,16 @@
   .image-hero-copy{left:12px;right:12px;bottom:12px;width:auto;max-width:none;padding:11px 13px}
   .image-hero-copy .preview-title{font-size:clamp(21px,6vw,25px);line-height:1.08}
 }
+
+/* Keep title scale consistent within each asset type across both audiences. */
+.image-hero.landing-hero .image-hero-copy .preview-title{font-size:clamp(29px,3.7vw,46px);max-width:620px}
+.image-hero.sell-sheet-hero .image-hero-copy .preview-title{font-size:clamp(27px,3.2vw,38px);max-width:560px}
+.image-hero.infographic-hero .image-hero-copy .preview-title{font-size:clamp(22px,2.5vw,30px);max-width:520px}
+@media(max-width:600px){
+  .image-hero.landing-hero .image-hero-copy .preview-title{font-size:clamp(23px,6vw,29px)}
+  .image-hero.sell-sheet-hero .image-hero-copy .preview-title{font-size:clamp(22px,5.5vw,27px)}
+  .image-hero.infographic-hero .image-hero-copy .preview-title{font-size:clamp(20px,5vw,23px)}
+}
 </style>
 </head>
 <body>
