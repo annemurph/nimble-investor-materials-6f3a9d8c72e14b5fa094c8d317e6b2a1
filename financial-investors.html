@@ -12,40 +12,40 @@
 <style>
 :root{
   --bg:#ffffff;
-  --bg-2:#f2efe9;
-  --bg-3:#ece8df;
+  --bg-2:#f4efe3;
+  --bg-3:#eae1cc;
   --surface:#ffffff;
   --ink:#101613;
-  --ink-2:#3d4742;
-  --ink-3:#6b7570;
-  --line:#ddd8cc;
-  --line-2:#cbc4b2;
+  --ink-2:#4a443a;
+  --ink-3:#7d7462;
+  --line:#ded4bd;
+  --line-2:#c8b995;
   --green:#14342b;
   --green-2:#1e4d3f;
-  --green-light:#e6efe9;
+  --green-light:#ede4cd;
   --gold:#b9975b;
   --gold-dark:#8a6f35;
-  --gold-light:#f7ecd2;
+  --gold-light:#f2e8c8;
   --gold-2:#d9bc7a;
   --accent:#14342b;
-  --warn-bg:#fff8e6;
+  --warn-bg:#fbf4d9;
   --warn-line:#e3c87a;
   --radius:14px;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#0d1310;
-    --bg-2:#121a16;
-    --bg-3:#18221d;
-    --surface:#141d18;
+    --bg:#131109;
+    --bg-2:#1a1710;
+    --bg-3:#242017;
+    --surface:#1c1913;
     --ink:#f2efe9;
-    --ink-2:#c8cfc9;
-    --ink-3:#9aa69f;
-    --line:#2a352f;
-    --line-2:#3a4a40;
+    --ink-2:#cfc8b8;
+    --ink-3:#a79d89;
+    --line:#38322a;
+    --line-2:#4d4636;
     --green:#d9bc7a;
     --green-2:#e6d5a3;
-    --green-light:#1d2f27;
+    --green-light:#2a2517;
     --gold:#d9bc7a;
     --gold-dark:#d9bc7a;
     --gold-light:#2a2415;
@@ -113,7 +113,7 @@ img,svg{display:block;max-width:100%}
 .token-result{margin-top:16px;background:#fff;color:#101613;border-radius:14px;padding:16px;display:flex;gap:14px;align-items:center;position:relative;z-index:1}
 .token-coin{width:52px;height:52px;border-radius:50%;background:var(--gold-light);border:2px solid var(--gold);display:grid;place-items:center;font-family:"IBM Plex Serif",serif;font-weight:700;font-size:22px;color:var(--gold-dark);flex-shrink:0}
 .token-result strong{font-size:16px;line-height:1.3;display:block}
-.token-result span{font-size:13px;color:#5a655f;line-height:1.45;display:block}
+.token-result span{font-size:13px;color:#6f6656;line-height:1.45;display:block}
 
 /* stats */
 .stats{margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
@@ -204,15 +204,15 @@ img,svg{display:block;max-width:100%}
 .presale-card{background:#ffffff;color:#101613;border:1px solid var(--line-2);border-top:4px solid var(--gold);border-radius:20px;padding:28px;display:grid;gap:28px}
 @media(min-width:820px){.presale-card{grid-template-columns:1.2fr .8fr;padding:36px}}
 .presale-card h3{font-family:"IBM Plex Serif",serif;font-size:28px;line-height:1.1;margin:0 0 10px}
-.presale-card p{color:#3d4742;margin:0;font-size:15px;line-height:1.6}
+.presale-card p{color:#4a443a;margin:0;font-size:15px;line-height:1.6}
 .progress{margin-top:22px}
 .progress-head{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:8px}
-.progress-track{height:12px;background:#e9e2d2;border-radius:999px;overflow:hidden}
+.progress-track{height:12px;background:#e9e0cb;border-radius:999px;overflow:hidden}
 .progress-fill{height:100%;width:4%;background:var(--gold-dark);border-radius:999px;transition:width 1s ease}
 .tiers{display:grid;gap:10px}
-.tier{border:1px solid var(--line-2);border-radius:14px;padding:16px;display:flex;justify-content:space-between;gap:16px;align-items:center;background:#f7f3ec}
+.tier{border:1px solid var(--line-2);border-radius:14px;padding:16px;display:flex;justify-content:space-between;gap:16px;align-items:center;background:#f6f2e7}
 .tier strong{font-family:"IBM Plex Serif",serif;font-size:22px}
-.tier span{font-size:13px;color:#5a655f;display:block;line-height:1.4}
+.tier span{font-size:13px;color:#6f6656;display:block;line-height:1.4}
 .tier .tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:#101613;padding:4px 8px;border-radius:999px;white-space:nowrap}
 
 /* steps */
@@ -397,11 +397,11 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
           <div class="donut-wrap">
             <svg width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Donut chart: 78 percent investors, 10 percent founder, 5 percent team, 4 percent partnership, 3 percent pre-seed">
               <!-- circumference for r=78 is ~490.1 -->
-              <circle cx="100" cy="100" r="78" fill="none" stroke="#e9e2d2" stroke-width="30"/>
+              <circle cx="100" cy="100" r="78" fill="none" stroke="#e9e0cb" stroke-width="30"/>
               <circle id="seg-investors" cx="100" cy="100" r="78" fill="none" stroke="#14342b" stroke-width="30" stroke-dasharray="382.3 490.1" transform="rotate(-90 100 100)"/>
               <circle id="seg-founder" cx="100" cy="100" r="78" fill="none" stroke="#b9975b" stroke-width="30" stroke-dasharray="49 490.1" stroke-dashoffset="-382.3" transform="rotate(-90 100 100)"/>
-              <circle id="seg-team" cx="100" cy="100" r="78" fill="none" stroke="#5b7a6e" stroke-width="30" stroke-dasharray="24.5 490.1" stroke-dashoffset="-431.3" transform="rotate(-90 100 100)"/>
-              <circle id="seg-partner" cx="100" cy="100" r="78" fill="none" stroke="#8a9a92" stroke-width="30" stroke-dasharray="19.6 490.1" stroke-dashoffset="-455.8" transform="rotate(-90 100 100)"/>
+              <circle id="seg-team" cx="100" cy="100" r="78" fill="none" stroke="#8a7a56" stroke-width="30" stroke-dasharray="24.5 490.1" stroke-dashoffset="-431.3" transform="rotate(-90 100 100)"/>
+              <circle id="seg-partner" cx="100" cy="100" r="78" fill="none" stroke="#b3a586" stroke-width="30" stroke-dasharray="19.6 490.1" stroke-dashoffset="-455.8" transform="rotate(-90 100 100)"/>
               <circle id="seg-preseed" cx="100" cy="100" r="78" fill="none" stroke="#d9bc7a" stroke-width="30" stroke-dasharray="14.7 490.1" stroke-dashoffset="-475.4" transform="rotate(-90 100 100)"/>
               <text x="100" y="94" text-anchor="middle" font-family="IBM Plex Serif, serif" font-size="26" font-weight="700" fill="currentColor">500M</text>
               <text x="100" y="114" text-anchor="middle" font-size="11" letter-spacing="1.5" fill="currentColor" opacity=".6">FIXED SUPPLY</text>
@@ -409,8 +409,8 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
             <ul class="legend" id="allocLegend">
               <li><button type="button" class="active" data-key="investors" data-title="Investors — 78% · 390M (N)" data-desc="The largest share by far. This is the pool allocated to capital investors participating in the token model."><span class="dot" style="background:#14342b"></span><span class="lbl">Investors<span class="amt">390,000,000 (N)</span></span><span class="val">78%</span></button></li>
               <li><button type="button" data-key="founder" data-title="Founder — 10% · 50M (N)" data-desc="Allocated to the founder. One in ten tokens sits in this slice of the fixed supply."><span class="dot" style="background:#b9975b"></span><span class="lbl">Founder<span class="amt">50,000,000 (N)</span></span><span class="val">10%</span></button></li>
-              <li><button type="button" data-key="team" data-title="Team — 5% · 25M (N)" data-desc="Allocated to the team building and operating the platform and property programme."><span class="dot" style="background:#5b7a6e"></span><span class="lbl">Team<span class="amt">25,000,000 (N)</span></span><span class="val">5%</span></button></li>
-              <li><button type="button" data-key="partner" data-title="Partnership — 4% · 20M (N)" data-desc="Reserved for partnerships — the relationships that source and support portfolio acquisitions."><span class="dot" style="background:#8a9a92"></span><span class="lbl">Partnership<span class="amt">20,000,000 (N)</span></span><span class="val">4%</span></button></li>
+              <li><button type="button" data-key="team" data-title="Team — 5% · 25M (N)" data-desc="Allocated to the team building and operating the platform and property programme."><span class="dot" style="background:#8a7a56"></span><span class="lbl">Team<span class="amt">25,000,000 (N)</span></span><span class="val">5%</span></button></li>
+              <li><button type="button" data-key="partner" data-title="Partnership — 4% · 20M (N)" data-desc="Reserved for partnerships — the relationships that source and support portfolio acquisitions."><span class="dot" style="background:#b3a586"></span><span class="lbl">Partnership<span class="amt">20,000,000 (N)</span></span><span class="val">4%</span></button></li>
               <li><button type="button" data-key="preseed" data-title="Pre-seed — 3% · 15M (N)" data-desc="The smallest slice, allocated to pre-seed participation ahead of the wider investor allocation."><span class="dot" style="background:#d9bc7a"></span><span class="lbl">Pre-seed<span class="amt">15,000,000 (N)</span></span><span class="val">3%</span></button></li>
             </ul>
           </div>
@@ -423,7 +423,7 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
           <div class="stacked" role="img" aria-label="Stacked bar: one-third real estate reserves, one-third gold backing, one-third platform operations">
             <div style="width:33.333%;background:#14342b"></div>
             <div style="width:33.333%;background:#b9975b"></div>
-            <div style="width:33.334%;background:#8a9a92"></div>
+            <div style="width:33.334%;background:#b3a586"></div>
           </div>
           <div class="wf-grid">
             <div class="wf-item"><div class="pct">⅓</div><h4>Real estate reserves</h4><p>One-third of NOI — held for the property programme, reserves and future acquisitions.</p></div>
@@ -469,7 +469,7 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
             <div class="tier"><div><strong>500M fixed</strong><span>Total supply. No additional tokens will ever be minted</span></div></div>
             <div class="tier"><div><strong>No stated buy-in</strong><span>No minimum or maximum buy-in amount is stated</span></div><span class="tag">Open</span></div>
           </div>
-          <div style="margin-top:12px;border:1px dashed #cbc4b2;border-radius:14px;padding:16px;background:#f2efe9">
+          <div style="margin-top:12px;border:1px dashed #c8b995;border-radius:14px;padding:16px;background:#f4efe2">
             <p style="margin:0 0 6px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark)">Illustrative example only</p>
             <p style="margin:0;font-size:15px;line-height:1.55"><strong>$1 million at $0.01 = 100 million Nimble tokens</strong></p>
             <p style="margin:6px 0 0;font-size:13px;line-height:1.55;opacity:.8">Pure price maths at the stated $0.01 presale price ($1,000,000 ÷ $0.01). This is an illustration of the price, not a buy-in amount, tier, minimum, or maximum.</p>
