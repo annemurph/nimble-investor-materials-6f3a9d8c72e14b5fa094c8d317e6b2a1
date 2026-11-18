@@ -38,9 +38,9 @@
     --bg-2:#151a1f;
     --bg-3:#1f262d;
     --surface:#171d22;
-    --ink:#edf1f4;
-    --ink-2:#bfc9d1;
-    --ink-3:#8d99a4;
+    --ink:#f2f5f7;
+    --ink-2:#d3dde3;
+    --ink-3:#adbcc6;
     --line:#2c343c;
     --line-2:#3f4a54;
     --green:#d9bc7a;
@@ -98,22 +98,22 @@ img,svg{display:block;max-width:100%}
 
 /* dual backing visual card */
 .backing-card{background:var(--green);color:#fff;border-radius:20px;padding:24px;position:relative;overflow:hidden}
-@media (prefers-color-scheme: dark){.backing-card{background:#182a22;border:1px solid var(--line)}}
-.backing-card::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;border:36px solid rgba(217,188,122,.18)}
-.backing-card h2{font-family:"IBM Plex Serif",serif;font-size:22px;margin:0 0 4px;position:relative;z-index:1}
-.backing-card p{margin:0;color:rgba(255,255,255,.78);font-size:14px;position:relative;z-index:1}
+@media (prefers-color-scheme: dark){.backing-card{background:#122620;border:1px solid var(--line-2)}}
+.backing-card::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;border:36px solid rgba(217,188,122,.08)}
+.backing-card h2{font-family:"IBM Plex Serif",serif;font-size:22px;font-weight:700;color:#ffffff;margin:0 0 4px;position:relative;z-index:1}
+.backing-card p{margin:0;color:#eef3f0;font-size:14px;line-height:1.55;position:relative;z-index:1}
 .dual{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;position:relative;z-index:1}
-.dual-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:16px}
+.dual-box{background:rgba(10,22,18,.38);border:1px solid rgba(255,255,255,.34);border-radius:14px;padding:16px}
 .dual-box .icon{font-size:22px;margin-bottom:8px}
-.dual-box strong{display:block;font-size:15px;line-height:1.3}
-.dual-box span{font-size:12.5px;color:rgba(255,255,255,.72);line-height:1.45;display:block;margin-top:4px}
+.dual-box strong{display:block;font-size:15px;line-height:1.3;color:#ffffff;font-weight:700}
+.dual-box span{font-size:12.5px;color:#eef3f0;line-height:1.55;display:block;margin-top:4px}
 .plus{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
-.plus-line{flex:1;height:1px;background:rgba(255,255,255,.2)}
+.plus-line{flex:1;height:1px;background:rgba(255,255,255,.42)}
 .plus-badge{width:36px;height:36px;border-radius:50%;background:var(--gold);color:#101613;display:grid;place-items:center;font-weight:700;font-size:18px;flex-shrink:0}
 .token-result{margin-top:16px;background:#fff;color:#101613;border-radius:14px;padding:16px;display:flex;gap:14px;align-items:center;position:relative;z-index:1}
 .token-coin{width:52px;height:52px;border-radius:50%;background:var(--gold-light);border:2px solid var(--gold);display:grid;place-items:center;font-family:"IBM Plex Serif",serif;font-weight:700;font-size:22px;color:var(--gold-dark);flex-shrink:0}
-.token-result strong{font-size:16px;line-height:1.3;display:block}
-.token-result span{font-size:13px;color:#5c6973;line-height:1.45;display:block}
+.token-result strong{font-size:16px;line-height:1.3;display:block;color:#101613}
+.token-result span{font-size:13px;color:#34414b;line-height:1.55;display:block}
 
 /* stats */
 .stats{margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
@@ -234,13 +234,14 @@ img,svg{display:block;max-width:100%}
 /* contact */
 .contact{background:var(--green);color:#fff;border-radius:20px;padding:28px}
 @media(min-width:768px){.contact{padding:36px}}
-@media (prefers-color-scheme: dark){.contact{background:#182a22;border:1px solid var(--line)}}
-.contact h2{color:#fff;margin:0 0 10px}
-.contact p{color:rgba(255,255,255,.78);max-width:560px}
+@media (prefers-color-scheme: dark){.contact{background:#122620;border:1px solid var(--line-2)}}
+.contact h2{color:#ffffff;font-weight:700;margin:0 0 10px}
+.contact .kicker{color:#e9d8a6 !important}
+.contact p{color:#eef3f0;line-height:1.65;max-width:560px}
 .contact-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 .contact-links a{display:inline-flex;align-items:center;min-height:50px;padding:0 20px;border-radius:999px;font-weight:600;text-decoration:none;font-size:15px}
 .contact-links .mail{background:#fff;color:#101613}
-.contact-links .tel{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.contact-links .tel{background:rgba(255,255,255,.08);color:#ffffff;border:1px solid rgba(255,255,255,.72)}
 
 footer{padding:36px 0 48px;border-top:1px solid var(--line)}
 .footer-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:start}
