@@ -78,11 +78,6 @@ img,svg{display:block;max-width:100%}
 .top-cta{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;background:var(--ink);color:var(--bg);border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}
 @media (prefers-color-scheme: dark){.top-cta{background:var(--gold);color:#101613}}
 
-/* notice */
-.notice{background:var(--warn-bg);border-bottom:1px solid var(--warn-line)}
-.notice p{margin:0;padding:10px 0;font-size:12.5px;line-height:1.5;color:var(--ink-2);text-align:center}
-.notice strong{color:var(--ink)}
-
 /* hero */
 .hero{padding:48px 0 0;overflow:hidden}
 @media(min-width:768px){.hero{padding:72px 0 0}}
@@ -247,11 +242,6 @@ img,svg{display:block;max-width:100%}
 .contact-links .mail{background:#fff;color:#101613}
 .contact-links .tel{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
 
-/* disclaimer */
-.disclaimer{border:1px solid var(--warn-line);background:var(--warn-bg);border-radius:16px;padding:22px;margin:0 0 24px}
-.disclaimer h3{margin:0 0 10px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-.disclaimer p{margin:0 0 10px;font-size:13.5px;line-height:1.65;color:var(--ink-2)}
-.disclaimer p:last-child{margin-bottom:0}
 footer{padding:36px 0 48px;border-top:1px solid var(--line)}
 .footer-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:start}
 footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:640px}
@@ -276,10 +266,6 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
     <a class="top-cta" href="#contact">Contact the team</a>
   </div>
 </header>
-
-<div class="notice" role="note">
-  <div class="wrap"><p><strong>Information only.</strong> This page summarises claims made by Project Nimble. It is not an offer to buy or sell securities, and those claims have not been independently verified. See the full disclaimer at the bottom of this page.</p></div>
-</div>
 
 <main id="top">
   <!-- HERO -->
@@ -357,7 +343,7 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
           <div class="flow-arrow" aria-hidden="true">→</div>
           <div class="flow-step"><span class="num">Step 04 — Income</span><h3>NOI waterfall</h3><p>Rental income after operating costs (NOI) is split <strong>one-third each</strong> — to real estate reserves, gold backing, and platform operations — detailed below.</p></div>
         </div>
-        <div class="flow-note"><strong>Why debt-free matters in this model:</strong> With no mortgage on the portfolios, there is no lender claim ahead of the project and no interest payment taken out of NOI before the waterfall. That is the central claim of the Project Nimble structure — and, like all claims on this page, it has not been independently verified here.</div>
+        <div class="flow-note"><strong>Why debt-free matters in this model:</strong> With no mortgage on the portfolios, there is no lender claim ahead of the project and no interest payment taken out of NOI before the waterfall. That is the central claim of the Project Nimble structure.</div>
       </div>
 
       <div class="pillars">
@@ -449,7 +435,7 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
             <label for="noiInput">Try it — enter a hypothetical NOI amount</label>
             <div class="calc-row">
               <input id="noiInput" type="number" min="0" step="1000" value="99999" inputmode="numeric" aria-describedby="calcNote">
-              <span style="font-size:13px;color:var(--ink-3)" id="calcNote">Illustration only — not a forecast or a promised return. Each third is shown rounded to the nearest dollar.</span>
+              <span style="font-size:13px;color:var(--ink-3)" id="calcNote">Each third is shown rounded to the nearest dollar.</span>
             </div>
             <div class="calc-results" aria-live="polite">
               <div><span>→ Real estate · ⅓</span><strong id="calcRE">$33,333</strong></div>
@@ -474,10 +460,6 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
           <div class="progress" aria-label="Presale 4 percent filled">
             <div class="progress-head"><span>Presale filled</span><span>4%</span></div>
             <div class="progress-track"><div class="progress-fill" id="presaleFill"></div></div>
-            <p style="font-size:12.5px;margin-top:8px">Figure as published by Project Nimble — not independently verified on this page.</p>
-          </div>
-          <div style="margin-top:18px;border:1px solid #d9bc7a;background:#f7ecd2;border-radius:12px;padding:14px 16px">
-            <p style="margin:0;font-size:13.5px;line-height:1.6;color:inherit"><strong style="color:var(--gold-dark)">What holding tokens does — and does not — provide:</strong> Holding tokens does not provide company equity, profit participation, dividends, or claims on company revenue.</p>
           </div>
         </div>
         <div>
@@ -492,15 +474,15 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
             <p style="margin:0;font-size:15px;line-height:1.55"><strong>$1 million at $0.01 = 100 million Nimble tokens</strong></p>
             <p style="margin:6px 0 0;font-size:13px;line-height:1.55;opacity:.8">Pure price maths at the stated $0.01 presale price ($1,000,000 ÷ $0.01). This is an illustration of the price, not a buy-in amount, tier, minimum, or maximum.</p>
           </div>
-          <p style="font-size:13px;margin-top:14px">Presale proceeds fund Project Nimble's startup and operating costs, as stated by Project Nimble. This page does not take payments or orders. To ask about participation, contact the team directly using the details below and do your own due diligence first.</p>
+          <p style="font-size:13px;margin-top:14px">Presale proceeds fund Project Nimble's startup and operating costs, as stated by Project Nimble. To ask about participation, contact the team directly using the details below.</p>
         </div>
       </div>
 
       <div class="steps" aria-label="How to enquire">
         <div class="step"><b>01</b><h3>Read the model</h3><p>Work through the dual-backing structure, the $0.01 presale for 50M tokens from the fixed 500M supply, and the one-third-each NOI waterfall on this page.</p></div>
-        <div class="step"><b>02</b><h3>Do your diligence</h3><p>Ask for documentation — property, gold custody, token terms — and take independent advice. Nothing here is verified.</p></div>
+        <div class="step"><b>02</b><h3>Do your diligence</h3><p>Ask for documentation — property, gold custody, token terms.</p></div>
         <div class="step"><b>03</b><h3>Contact the team</h3><p>Email <a href="mailto:Info@ProjectNimble.US">Info@ProjectNimble.US</a> or call <a href="tel:+15619844565">561-984-4565</a> with your questions.</p></div>
-        <div class="step"><b>04</b><h3>Decide for yourself</h3><p>Only proceed directly with Project Nimble if you are satisfied with the answers. This page is information only.</p></div>
+        <div class="step"><b>04</b><h3>Decide for yourself</h3><p>Only proceed directly with Project Nimble if you are satisfied with the answers.</p></div>
       </div>
     </div>
   </section>
@@ -519,7 +501,6 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
             <details><summary>How many tokens are there — will more be created?</summary><p>500 million (N), fixed. No additional tokens will ever be minted. The stated allocation is 78% investors (390M), 10% founder (50M), 5% team (25M), 4% partnership (20M) and 3% pre-seed (15M).</p></details>
             <details><summary>Where does the rental income go?</summary><p>Net operating income (NOI) is split one-third each to real estate reserves, gold backing, and platform operations, according to Project Nimble.</p></details>
             <details><summary>Does holding tokens give me equity or a share of profits?</summary><p>No. Holding tokens does not provide company equity, profit participation, dividends, or claims on company revenue.</p></details>
-            <details><summary>Is this an offer to invest?</summary><p>No. This page is for information only and is not an offer to buy or sell securities. The claims on it — including reserves, properties, supply and presale status — are Project Nimble's own and have not been independently verified here. Take independent financial and legal advice before making any decision.</p></details>
           </div>
         </div>
 
@@ -546,13 +527,6 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
 
 <footer>
   <div class="wrap">
-    <div class="disclaimer" role="note" aria-label="Disclaimer">
-      <h3>⚠ Important — Information Only · Not An Offer</h3>
-      <p><strong>This page is for general information only. It is not an offer to buy or sell securities, tokens, or any other financial product, and it is not financial, investment, legal, or tax advice.</strong> Nothing on this page should be relied on as a recommendation to invest, lend, or purchase anything.</p>
-      <p>All figures and claims on this page — including the 500M (N) token supply and its allocation (78% investors / 10% founder / 5% team / 4% partnership / 3% pre-seed), the $0.01 presale price, the 50 million tokens available at presale, the statement that no additional tokens will ever be minted, the statement that presale proceeds fund Project Nimble's startup and operating costs, the $5M–$100M debt-free multifamily acquisition model, gold reserves, the NOI split of one-third each to real estate reserves, gold backing, and platform operations, the statement that no minimum or maximum buy-in is stated, and the presale status shown as 4% filled — are statements made by or on behalf of Project Nimble (projectnimble.us). <strong>They have not been independently verified</strong> in the preparation of this page, and no assurance is given that they are accurate, complete, or current.</p>
-      <p><strong>Holding tokens does not provide company equity, profit participation, dividends, or claims on company revenue.</strong> The illustrative example on this page — $1 million at $0.01 = 100 million Nimble tokens — is price maths only; it is not a buy-in amount, tier, minimum, or maximum, and it is not a forecast or promise of value or return.</p>
-      <p>Any investment or token purchase involves risk, including possible loss of the full amount. Past or projected property income (NOI) is not a guarantee of future results. Before making any decision, review original documentation from Project Nimble, verify claims independently, and consult your own qualified financial and legal advisers.</p>
-    </div>
     <div class="footer-grid">
       <div>
         <p><strong style="color:var(--ink)">Project Nimble — Capital Investors</strong><br>Real Estate. Gold. Blockchain. · projectnimble.us<br>Contact: <a href="mailto:Info@ProjectNimble.US">Info@ProjectNimble.US</a> · <a href="tel:+15619844565">561-984-4565</a></p>
