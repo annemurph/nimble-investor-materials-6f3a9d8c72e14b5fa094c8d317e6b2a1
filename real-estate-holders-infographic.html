@@ -8,224 +8,236 @@
 <title>Project Nimble — For Real Estate Holders</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    /* Palette: ink, gold accents, and cool tones only — cool greys, slate, blue-grey,
-       cool white, deep green. No pink, rose, blush, peach, or warm beige/cream anywhere. */
-    --page-bg:#e7ebef;
-    --ink:#182026;
-    --ink-strong:#11171c;
-    --ink-2:#46525c;
-    --gold:#9c7a1e;
-    --gold-bright:#c19a2e;
-    --gold-soft:#e9edf1;
-    --green:#2f6f5e;
-    --green-soft:#e2ebe6;
-    --slate:#3d556e;
-    --slate-soft:#e3e9ef;
-    --paper:#fbfcfd;
-    --line:#d2d9df;
-    --line-strong:#aeb9c3;
-    --serif:"IBM Plex Serif", Georgia, serif;
-    --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --mono:"IBM Plex Mono", ui-monospace, monospace;
+    --page-bg:#dde4e8;
+    --page-bg-dark:#0d1418;
+    --ink:#10161a;
+    --ink-2:#36434c;
+    --ink-3:#66727c;
+    --green:#14342b;
+    --gold:#b9975b;
+    --gold-dark:#8a6f35;
+    --gold-2:#d9bc7a;
+    --paper:#ffffff;
+    --paper-2:#e6ebee;
+    --paper-3:#eef2f4;
+    --line:#c9d2d8;
+    --line-2:#9fb0ba;
+    --font-serif:"IBM Plex Serif", Georgia, serif;
+    --font-sans:"IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --font-mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
   body{
+    font-family:var(--font-sans);
     background:var(--page-bg);
-    font-family:var(--sans);
-    font-weight:400;
     color:var(--ink);
-    min-height:100vh;
-    display:flex;
-    align-items:flex-start;
-    justify-content:center;
-    padding:24px 16px 32px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
   }
-  main{width:min(100%, 1080px); margin:0 auto}
+  @media (prefers-color-scheme: dark){
+    body{background:var(--page-bg-dark)}
+  }
+  a{text-decoration:none;color:inherit}
+  button{font-family:inherit}
 
-  /* Toolbar — page chrome only, not part of the graphic */
-  .toolbar{
-    width:min(100%, 1080px);
-    display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
-    margin-bottom:12px;
+  .stage{
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:18px 14px 28px;
+    gap:14px;
   }
-  .toolbar-note{font-size:14px; font-weight:500; letter-spacing:.02em; color:var(--ink-2)}
+  .toolbar{
+    width:min(1080px,100%);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  /* cropped poster — height follows content, no empty bottom */
+  .toolbar-note{
+    font-size:13px;
+    font-weight:500;
+    letter-spacing:.02em;
+    color:var(--ink-3);
+  }
   @media (prefers-color-scheme: dark){ .toolbar-note{color:#c2ccd3} }
   .dl-btn{
-    min-height:44px; padding:10px 18px; border-radius:999px;
-    border:1px solid var(--ink); background:var(--ink); color:#fff;
-    font-family:var(--sans); font-size:14px; font-weight:600; letter-spacing:.02em; cursor:pointer;
+    min-height:44px;
+    padding:10px 18px;
+    border-radius:999px;
+    border:1px solid var(--green);
+    background:var(--green);
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.02em;
+    cursor:pointer;
   }
   .dl-btn:active{transform:translateY(1px)}
-  .dl-btn:disabled{opacity:.6; cursor:wait}
-  .dl-status{font-size:13px; color:var(--ink-2); min-height:18px; width:min(100%, 1080px); margin-bottom:10px}
+  .dl-status{font-size:13px;color:var(--ink-3);min-height:18px;width:min(1080px,100%)}
   @media (prefers-color-scheme: dark){ .dl-status{color:#c2ccd3} }
-  @media (prefers-color-scheme: dark){
-    body{background:#1c1e22}
-  }
 
-  /* ---------- POSTER : 1080 wide, cropped to content, no fixed portrait ratio ---------- */
+  /* ---------- POSTER : cropped tight to content, 1080 wide ---------- */
   .poster{
-    container-type:inline-size;
-    width:min(100%, 1080px);
+    width:min(1080px,100%);
     background:var(--paper);
-    border:1.5px solid var(--ink);
-    box-shadow:0 14px 34px rgba(19,26,31,.10);
-    display:flex;
-    flex-direction:column;
+    border-top:5px solid var(--gold);
+    border-bottom:5px solid var(--gold);
+    border-radius:18px;
     overflow:hidden;
-    color-scheme:light;
-  }
-  .rule{height:.5cqw; background:var(--gold-bright); flex:none}
-
-  .inner{
+    box-shadow:0 18px 50px rgba(13,20,24,.18), 0 2px 10px rgba(13,20,24,.09);
+    container-type:inline-size;
     display:flex;
     flex-direction:column;
-    padding:3.6cqw 6.2cqw 4cqw;
+    text-align:left;
+  }
+  .poster-inner{
+    display:flex;
+    flex-direction:column;
+    padding:5cqw 6.2cqw 5cqw;
+    gap:4.2cqw;
   }
 
-  /* Header — sell sheet head: serif brand, mono audience label */
-  .brandrow{
-    display:flex; align-items:center; justify-content:space-between; gap:3cqw;
-    padding-bottom:1.6cqw;
-    border-bottom:2px solid var(--ink);
-  }
-  .brand{
-    font-family:var(--serif);
-    font-size:2.75cqw; font-weight:700; letter-spacing:0; color:var(--ink-strong);
-    white-space:nowrap; line-height:1.15;
-  }
-  .brand span{color:var(--gold)}
+  /* Header */
+  .p-head{display:flex;align-items:center;justify-content:space-between;gap:3cqw}
+  .brand{font-family:var(--font-serif);font-weight:700;font-size:2.6cqw;letter-spacing:-.01em;color:var(--ink)}
+  .brand span{color:var(--gold-dark);font-weight:700}
   .audience{
-    font-family:var(--mono);
-    font-size:1.42cqw; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gold);
-    text-align:right; line-height:1.5; white-space:nowrap;
+    font-family:var(--font-sans);font-size:1.75cqw;font-weight:600;letter-spacing:.12em;color:var(--green);
+    background:var(--paper-2);border:1px solid var(--line-2);border-radius:999px;
+    padding:.8cqw 1.9cqw;white-space:nowrap;
   }
 
-  h1{
-    font-family:var(--serif);
-    font-size:4.55cqw; line-height:1.14; font-weight:700; letter-spacing:-.01em;
-    margin:3.2cqw 0 0; color:var(--ink-strong); text-wrap:balance;
+  /* Title — heavy serif against the light body */
+  .p-title{
+    font-family:var(--font-serif);font-weight:700;
+    font-size:4.55cqw;line-height:1.08;letter-spacing:-.015em;color:var(--ink);
+    margin:0;
   }
-  h1 em{font-style:normal; color:var(--gold); white-space:nowrap}
+  .p-title em{font-style:normal;font-weight:700;color:var(--gold-dark)}
+  /* Dual backing */
+  .backing{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw}
+  .back-card{
+    border:1px solid var(--line);border-radius:2.2cqw;padding:1.7cqw 2.4cqw;
+    display:flex;gap:2.2cqw;align-items:center;background:var(--paper);
+  }
+  .back-card.goldcard{background:var(--paper-3);border-color:var(--line-2)}
+  .back-ico{flex:none;width:4.6cqw;height:4.6cqw;border-radius:1.3cqw;display:grid;place-items:center}
+  .back-ico.navy{background:var(--green)}
+  .back-ico.gold{background:var(--gold-dark)}
+  .back-ico svg{width:2.9cqw;height:2.9cqw;display:block}
+  .back-t{font-family:var(--font-sans);font-weight:600;font-size:2.3cqw;line-height:1.35;letter-spacing:0;color:var(--ink)}
 
-  /* Steps — sell sheet style: open rows divided by hairlines, no filled cards */
-  .steps{margin-top:2.2cqw; display:flex; flex-direction:column}
-  .step{
-    display:flex; gap:2.8cqw; align-items:flex-start;
-    padding:2.6cqw 0;
-    border-bottom:1px solid var(--line);
-  }
-  .step:first-child{padding-top:1.8cqw}
-  .num{
-    flex:none;
-    width:4.1cqw; height:4.1cqw; border-radius:50%;
-    background:transparent;
-    border:1.5px solid var(--ink);
-    color:var(--ink-strong);
-    font-family:var(--serif);
-    display:flex; align-items:center; justify-content:center;
-    font-size:2.2cqw; font-weight:700; line-height:1;
-    margin-top:.2cqw;
-  }
-  .step-body{flex:1; min-width:0}
-  .step h2{
-    margin:0; font-family:var(--sans); font-size:2.42cqw; line-height:1.2; font-weight:700; color:var(--ink-strong); letter-spacing:0;
-  }
-  .step p{
-    margin:.55cqw 0 0; font-size:1.66cqw; line-height:1.55; font-weight:400; color:var(--ink-2); letter-spacing:0;
-  }
-  .step p strong{color:var(--ink); font-weight:600}
-
-  /* Example math inside step 2 — pale tint panel, mono figures like the sell sheet */
-  .math{
-    margin-top:1.5cqw;
-    background:var(--gold-soft);
-    border:1px solid var(--line);
-    border-radius:.6cqw;
-    padding:1.15cqw 2.2cqw;
-  }
-  .math .row{display:flex; align-items:baseline; gap:2.2cqw}
-  .math .tag{
-    font-family:var(--mono);
-    font-size:1.32cqw; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gold);
-    flex:none;
-  }
-  .math .eq{
-    font-family:var(--mono);
-    font-size:1.98cqw; font-weight:600; color:var(--ink-strong); line-height:1.3; letter-spacing:0; white-space:nowrap;
-  }
-  .math .eq .rate{color:var(--gold)}
-
-  /* NOI split bar (inside step 3) — sell sheet thirds palette */
-  .bar{display:flex; border:1px solid var(--line-strong); border-radius:.6cqw; overflow:hidden; margin-top:1.5cqw}
-  .seg{flex:1; padding:1.3cqw 1.2cqw 1.4cqw; text-align:center}
-  .seg + .seg{border-left:1px solid var(--line-strong)}
-  .seg.s1{background:var(--green-soft)}
-  .seg.s2{background:var(--gold-soft)}
-  .seg.s3{background:var(--slate-soft)}
-  .seg .frac{font-family:var(--serif); font-size:2.95cqw; font-weight:700; line-height:1; color:var(--ink-strong)}
-  .seg.s1 .frac{color:var(--green)}
-  .seg.s2 .frac{color:var(--gold)}
-  .seg.s3 .frac{color:var(--slate)}
-  .seg .who{margin-top:.6cqw; font-size:1.45cqw; font-weight:600; line-height:1.35; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; white-space:nowrap}
-
-  /* Backing band — sell sheet third-cards: white, hairline border, 3px top accent */
-  .backing{
-    margin-top:3.4cqw;
-    display:grid; grid-template-columns:1fr 1fr 1fr; gap:2.2cqw;
-  }
-  .pillar{
+  /* Presale */
+  .presale{
     background:var(--paper);
-    border:1px solid var(--line);
-    border-top:.45cqw solid var(--gold-bright);
-    border-radius:.6cqw;
-    padding:1.7cqw 2cqw 1.6cqw;
+    border:1px solid var(--line-2);
+    border-top:3px solid var(--gold);
+    border-radius:2.6cqw;
+    padding:2.8cqw 3.2cqw 2.6cqw;
   }
-  .pillar.re{border-top-color:var(--green)}
-  .pillar.au{border-top-color:var(--gold-bright)}
-  .pillar.supply{border-top-color:var(--slate)}
-  .pillar h4{margin:0; font-family:var(--sans); font-size:2.15cqw; font-weight:700; line-height:1.2; letter-spacing:0; color:var(--ink-strong); white-space:nowrap}
-  .pillar p{margin:.5cqw 0 0; font-size:1.55cqw; line-height:1.5; font-weight:400; letter-spacing:0; color:var(--ink-2)}
+  .sec-label{
+    font-family:var(--font-sans);font-size:1.8cqw;font-weight:700;letter-spacing:.14em;color:var(--gold-dark);
+    display:flex;align-items:center;gap:2cqw;
+  }
+  .sec-label::after{content:"";flex:1;height:1px;background:var(--line)}
+  .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.6cqw;margin-top:1.7cqw}
+  .stat-big{font-family:var(--font-serif);font-weight:700;font-size:4.4cqw;line-height:1;color:var(--ink);letter-spacing:-.02em}
+  .stat-cap{font-family:var(--font-sans);font-size:1.7cqw;font-weight:600;letter-spacing:.1em;color:var(--ink-3);margin-top:.9cqw;line-height:1.35;white-space:nowrap}
+  .mint-note{font-size:2cqw;font-weight:400;color:var(--ink-2);margin-top:1.6cqw;line-height:1.5;letter-spacing:0}
+  .mint-note span{color:var(--ink);font-weight:600}
+  .subline{
+    border-top:1px solid var(--line);
+    margin-top:1.7cqw;padding-top:1.7cqw;
+    font-size:2.05cqw;line-height:1.55;font-weight:400;color:var(--ink-2);
+  }
+  .subline strong{font-weight:600;color:var(--ink)}
+  .subline .lbl{font-family:var(--font-sans);font-weight:700;font-size:1.75cqw;color:var(--gold-dark);letter-spacing:.1em}
+  .example-block{
+    border-top:1px solid var(--line);
+    margin-top:1.7cqw;padding-top:1.7cqw;
+  }
+  .ex-label{font-family:var(--font-sans);font-size:1.7cqw;font-weight:700;letter-spacing:.12em;color:var(--green);line-height:1.3}
+  .ex-eq{
+    font-family:var(--font-serif);font-weight:600;color:var(--ink);
+    font-size:3cqw;line-height:1.25;letter-spacing:-.01em;margin-top:.8cqw;
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:1.3cqw;
+  }
+  .ex-eq .op{font-family:var(--font-sans);color:var(--ink-3);font-weight:400;font-size:1.95cqw;letter-spacing:0}
+  .ex-eq .result{color:var(--gold-dark);font-weight:700}
 
-  .format-note{
-    width:min(100%, 1080px);
-    margin:14px auto 0;
-    text-align:center;
-    font-size:13px; line-height:1.5; color:#5b6472;
-  }
-  @media (prefers-color-scheme: dark){ .format-note{color:#a7aeb9} }
+  /* NOI */
+  .noi-head{display:flex;align-items:baseline;justify-content:space-between;gap:3cqw}
+  .noi-title{font-family:var(--font-serif);font-weight:700;font-size:3.35cqw;color:var(--ink);line-height:1.15;letter-spacing:-.015em}
+  .noi-sub{font-family:var(--font-sans);font-size:2cqw;font-weight:400;color:var(--ink-3);text-align:right;line-height:1.4;letter-spacing:0;white-space:nowrap}
+  .noi-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.8cqw;margin-top:1.6cqw}
+  .noi-cell{border-top:2px solid var(--line);padding-top:1.2cqw;display:flex;align-items:baseline;gap:1.2cqw}
+  .noi-cell.c1{border-top-color:var(--green)}
+  .noi-cell.c2{border-top-color:var(--gold)}
+  .noi-cell.c3{border-top-color:#7e8d99}
+  .noi-frac{font-family:var(--font-serif);font-weight:600;font-size:3.4cqw;color:var(--ink);line-height:1;flex:none}
+  .noi-name{font-family:var(--font-sans);font-size:1.95cqw;font-weight:600;letter-spacing:0;color:var(--ink);line-height:1.35;white-space:nowrap}
 
   @media (max-width:480px){
-    body{padding:10px 6px 18px}
+    .stage{padding:12px 10px 22px}
+    .poster{border-radius:14px}
   }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;animation:none !important}
+  }
+
+  /* Steps + pillars for real estate holders — values copied from capital cards */
+  .steps{display:flex;flex-direction:column;gap:2.4cqw}
+  .step{
+    border:1px solid var(--line);border-radius:2.2cqw;padding:1.7cqw 2.4cqw;
+    display:flex;gap:2.2cqw;align-items:flex-start;background:var(--paper);
+  }
+  .num{
+    flex:none;width:4.6cqw;height:4.6cqw;border-radius:1.3cqw;display:grid;place-items:center;
+    background:var(--green);color:#fff;font-family:var(--font-serif);font-weight:700;font-size:2.3cqw;line-height:1;
+  }
+  .step:nth-child(2) .num{background:var(--gold-dark)}
+  .step:nth-child(3) .num{background:var(--green)}
+  .step-body{flex:1;min-width:0}
+  .step h2{font-family:var(--font-sans);font-weight:600;font-size:2.3cqw;line-height:1.35;letter-spacing:0;color:var(--ink);margin:0}
+  .step p{font-size:2cqw;font-weight:400;color:var(--ink-2);margin:.9cqw 0 0;line-height:1.5;letter-spacing:0}
+  .step p strong{color:var(--ink);font-weight:600}
+  .pillars{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.4cqw}
+  .pillar{
+    border:1px solid var(--line);border-radius:2.2cqw;padding:1.7cqw 2.4cqw;
+    display:flex;flex-direction:column;gap:.9cqw;background:var(--paper);
+    border-top:3px solid var(--green);
+  }
+  .pillar.au{border-top-color:var(--gold);background:var(--paper-3);border-color:var(--line-2)}
+  .pillar.supply{border-top-color:#7e8d99}
+  .pillar h4{font-family:var(--font-sans);font-weight:600;font-size:2.3cqw;line-height:1.35;letter-spacing:0;color:var(--ink);margin:0}
+  .pillar p{font-size:2cqw;font-weight:400;color:var(--ink-2);margin:0;line-height:1.5;letter-spacing:0}
 </style>
 </head>
 <body>
-
-<main>
+<main class="stage">
   <div class="toolbar">
-    <div class="toolbar-note">1080 wide &middot; Cropped to content &middot; Sized for social media</div>
+    <div class="toolbar-note">Portrait · 1080 wide · Cropped tight for social</div>
     <button class="dl-btn" id="dlBtn" type="button">Download PNG — 1080 wide</button>
   </div>
   <div class="dl-status" id="dlStatus" aria-live="polite"></div>
-
   <article class="poster" id="poster" aria-label="Project Nimble poster for real estate holders with 20 or more units">
-    <div class="rule" aria-hidden="true"></div>
-    <div class="inner">
-
-      <div class="brandrow">
-        <div class="brand">Project <span>Nimble</span></div>
-        <div class="audience">For real estate holders &middot; 20+ units</div>
+    <div class="poster-inner">
+      <div class="p-head">
+        <div class="brand">PROJECT <span>NIMBLE</span></div>
+        <div class="audience">FOR REAL ESTATE HOLDERS · 20+ UNITS</div>
       </div>
-
-      <h1>Your <em>20+ unit</em> portfolio is what Nimble buys</h1>
-
+      <div>
+        <h1 class="p-title">Your <em>20+ unit</em> portfolio is what Nimble buys</h1>
+      </div>
       <section class="steps" aria-label="How a contribution works in three steps">
-
         <div class="step">
           <div class="num" aria-hidden="true">1</div>
           <div class="step-body">
@@ -233,46 +245,45 @@
             <p>A qualifying <strong>debt-free apartment property of 20+ units</strong>, free and clear of debt.</p>
           </div>
         </div>
-
         <div class="step">
           <div class="num" aria-hidden="true">2</div>
           <div class="step-body">
             <h2>Receive its full agreed value in tokens</h2>
             <p>Its <strong>full agreed value in Nimble tokens</strong>, at the prevailing rate.</p>
-            <div class="math">
-              <div class="row">
-                <span class="tag">Example</span>
-                <span class="eq">$1,000,000 &divide; <span class="rate">$0.01</span> = 100,000,000 tokens</span>
+            <div class="example-block">
+              <div class="ex-label">EXAMPLE</div>
+              <div class="ex-eq">
+                <span>$1,000,000</span>
+                <span class="op">÷ $0.01</span>
+                <span class="op">=</span>
+                <span class="result">100,000,000 tokens</span>
               </div>
             </div>
           </div>
         </div>
-
         <div class="step">
           <div class="num" aria-hidden="true">3</div>
           <div class="step-body">
             <h2>Retain one-third of the NOI</h2>
-            <p>You <strong>retain one-third of that property&rsquo;s net operating income (NOI)</strong>:</p>
-            <div class="bar" role="img" aria-label="NOI split in equal thirds: one-third to the contributing owner, one-third to gold backing, one-third to platform operations">
-              <div class="seg s1">
-                <div class="frac">&frac13;</div>
-                <div class="who">You, the owner</div>
+            <p>You <strong>retain one-third of that property’s net operating income (NOI)</strong>:</p>
+            <div class="noi-grid" role="img" aria-label="NOI split in equal thirds: one-third to the contributing owner, one-third to gold backing, one-third to platform operations">
+              <div class="noi-cell c1">
+                <div class="noi-frac">⅓</div>
+                <div class="noi-name">You, the owner</div>
               </div>
-              <div class="seg s2">
-                <div class="frac">&frac13;</div>
-                <div class="who">Gold backing</div>
+              <div class="noi-cell c2">
+                <div class="noi-frac">⅓</div>
+                <div class="noi-name">Gold backing</div>
               </div>
-              <div class="seg s3">
-                <div class="frac">&frac13;</div>
-                <div class="who">Operations</div>
+              <div class="noi-cell c3">
+                <div class="noi-frac">⅓</div>
+                <div class="noi-name">Operations</div>
               </div>
             </div>
           </div>
         </div>
-
       </section>
-
-      <section class="backing" aria-label="What backs the Nimble token">
+      <section class="pillars" aria-label="What backs the Nimble token">
         <div class="pillar re">
           <h4>Real estate</h4>
           <p>Debt-free multifamily properties</p>
@@ -286,21 +297,15 @@
           <p>No more are minted</p>
         </div>
       </section>
-
     </div>
-    <div class="rule" aria-hidden="true"></div>
   </article>
-
-  <p class="format-note">Cropped to content &middot; sized for social media</p>
 </main>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
   (function(){
     var btn = document.getElementById('dlBtn');
     var status = document.getElementById('dlStatus');
     var poster = document.getElementById('poster');
-    if (!btn || !poster) return;
     btn.addEventListener('click', function(){
       if (typeof html2canvas === 'undefined') {
         status.textContent = 'Download could not start — please take a screenshot instead.';
@@ -310,14 +315,14 @@
       btn.disabled = true;
       var w = poster.offsetWidth || 1080;
       var scale = 1080 / w;
-      html2canvas(poster, { scale: scale, backgroundColor: '#fbfcfd', useCORS: true, logging: false }).then(function(canvas){
+      html2canvas(poster, { scale: scale, backgroundColor: '#ffffff', useCORS: true, logging: false }).then(function(canvas){
         var a = document.createElement('a');
         a.download = 'project-nimble-real-estate-holders.png';
         a.href = canvas.toDataURL('image/png');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        status.textContent = 'Downloaded — 1080 wide PNG, ready to post.';
+        status.textContent = 'Downloaded — PNG ready to post.';
         btn.disabled = false;
       }).catch(function(){
         status.textContent = 'Download failed — please take a screenshot instead.';
