@@ -1,7 +1,606 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Participate in Project Nimble’s token model, backed by real estate and gold, through the $0.01 presale."><title>Financial Investors | Project Nimble</title><link rel="stylesheet" href="styles.css?v=7"></head><body>
-<header class="header container"><a class="brand" href="index.html"><img class="brand-logo" src="nimble-logo.jpg" alt="Project Nimble logo: Real Estate + Gold + Crypto = (N)"></a><nav class="nav"><a href="#allocation">Investment allocation</a><a href="#terms">Capital example</a><a class="nav-cta" href="#next-step">Explore Nimble</a></nav></header>
-<main><section class="container hero"><div><p class="kicker">For financial investors</p><h1>Participate in Nimble’s <em>$0.01 presale.</em></h1><p class="lede">From the fixed Nimble token supply, 50 million tokens are available at the $0.01 presale price. No additional tokens will ever be minted. Presale proceeds fund Project Nimble’s startup and operating costs.</p><div class="actions"><a class="button primary" href="#allocation">See the opportunity <b>→</b></a><a class="button secondary" href="capital-investor-sell-sheet.pdf">Sell sheet</a><a class="button secondary" href="capital-investor-infographic.png">Infographic</a></div><p class="hero-note">The Nimble token is the utility and settlement instrument of a platform backed by real estate and gold. Holding tokens does not provide company equity, profit participation, dividends or claims on company revenue.</p></div><div class="visual capital-photo"><img src="capital-investor-hero.png" alt="Modern multifamily property with gold bars and dimensional Nimble style coins"><span class="visual-label">Capital · real estate backing · gold backing</span></div></section>
-<section class="section alt allocation-overview" id="allocation"><div class="container"><div class="section-head"><p class="kicker">Nimble company model</p><h2>The Nimble token is backed by real estate and gold.</h2><p>Wholly owned apartment properties establish the token’s real estate backing. One third of property NOI continually purchases and stores gold, expanding the token’s gold backing over time.</p></div><div class="steps allocation-steps"><article class="step" data-share="⅓"><span class="num">1/3 / REAL ESTATE RESERVES</span><h3>Strengthen the portfolio</h3><p>One third of NOI from company owned properties builds the real estate reserve account.</p></article><article class="step" data-share="⅓"><span class="num">1/3 / GOLD</span><h3>Expand gold backing</h3><p>One third of property NOI purchases and stores gold that backs the Nimble token.</p></article><article class="step" data-share="⅓"><span class="num">1/3 / OPERATIONS</span><h3>Build the platform</h3><p>One third of property NOI funds Project Nimble’s platform and operations.</p></article></div></div></section>
-<section class="section" id="terms"><div class="container"><div class="example capital-example"><div><p class="kicker">Illustrative token valuation</p><h2>$1 million at $0.01 per token.</h2><p>At the $0.01 example rate, a $1 million valuation corresponds to 100 million Nimble tokens. This demonstrates the token to value calculation; 50 million tokens from the fixed supply are available during the presale.</p></div><div><div class="example-figure"><div><strong>$1M</strong><span>Valuation</span></div><div class="arrow">→</div><div><strong>100M</strong><span>Nimble tokens at $0.01</span></div></div></div></div><div class="split" style="margin-top:20px"><article class="split-card"><h3>Presale purpose</h3><p>The $0.01 presale makes 50 million tokens from the fixed supply available to fund startup and operating costs. The total token supply never increases: no additional tokens will be minted.</p></article><article class="split-card"><h3>What to review</h3><p>Review the governing investment documents for pricing, rights, eligibility, risks, liquidity and use of funds terms.</p></article></div></div></section>
-<section class="closing" id="next-step"><div class="container"><p class="kicker">Capital participation</p><h2>Enter the Nimble model, backed by real estate and gold.</h2><p>See how the $0.01 presale opens access to the Nimble platform and its dual asset backing.</p><a class="button primary" href="capital-investor-sell-sheet.pdf">Open capital investor sell sheet <b>↓</b></a></div></section></main>
-<footer class="container footer"><div class="footer-top"><a class="brand" href="index.html"><img class="brand-logo" src="nimble-logo.jpg" alt="Project Nimble logo: Real Estate + Gold + Crypto = (N)"></a><span>Capital investor overview</span></div><div class="disclaimer">This page provides a general overview and does not constitute an offer, solicitation, investment recommendation or promise of investment outcome. Holding Nimble tokens does not convey company equity, profit participation, dividends or claims on company revenue. Token value may change and is not guaranteed. Refer to definitive documentation for complete terms, risks and eligibility requirements.</div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>Project Nimble — Capital Investors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --bg-2:#f2efe9;
+  --bg-3:#ece8df;
+  --surface:#ffffff;
+  --ink:#101613;
+  --ink-2:#3d4742;
+  --ink-3:#6b7570;
+  --line:#ddd8cc;
+  --line-2:#cbc4b2;
+  --green:#14342b;
+  --green-2:#1e4d3f;
+  --green-light:#e6efe9;
+  --gold:#b9975b;
+  --gold-dark:#8a6f35;
+  --gold-light:#f7ecd2;
+  --gold-2:#d9bc7a;
+  --accent:#14342b;
+  --warn-bg:#fff8e6;
+  --warn-line:#e3c87a;
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0d1310;
+    --bg-2:#121a16;
+    --bg-3:#18221d;
+    --surface:#141d18;
+    --ink:#f2efe9;
+    --ink-2:#c8cfc9;
+    --ink-3:#9aa69f;
+    --line:#2a352f;
+    --line-2:#3a4a40;
+    --green:#d9bc7a;
+    --green-2:#e6d5a3;
+    --green-light:#1d2f27;
+    --gold:#d9bc7a;
+    --gold-dark:#d9bc7a;
+    --gold-light:#2a2415;
+    --warn-bg:#241e0f;
+    --warn-line:#5c4d1f;
+    --accent:#d9bc7a;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important; transition:none!important} }
+body{margin:0;font-family:"IBM Plex Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--green);text-decoration-color:var(--gold);text-underline-offset:3px}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.wrap{padding:0 32px}}
+
+/* top bar */
+.topbar{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:20;backdrop-filter:saturate(1.2)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.mark{width:40px;height:40px;border-radius:9px;background:var(--green);color:#fff;display:grid;place-items:center;font-family:"IBM Plex Serif",serif;font-weight:700;font-size:20px;letter-spacing:-.02em;flex-shrink:0}
+@media (prefers-color-scheme: dark){.mark{background:var(--gold);color:#101613}}
+.brand strong{font-family:"IBM Plex Serif",serif;font-size:19px;line-height:1;letter-spacing:-.01em;display:block}
+.brand span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.nav{display:none;gap:4px}
+@media(min-width:820px){.nav{display:flex}}
+.nav a{font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:10px 12px;border-radius:8px;min-height:40px;display:inline-flex;align-items:center}
+.nav a:hover{background:var(--bg-2);color:var(--ink)}
+.top-cta{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;background:var(--ink);color:var(--bg);border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}
+@media (prefers-color-scheme: dark){.top-cta{background:var(--gold);color:#101613}}
+
+/* notice */
+.notice{background:var(--warn-bg);border-bottom:1px solid var(--warn-line)}
+.notice p{margin:0;padding:10px 0;font-size:12.5px;line-height:1.5;color:var(--ink-2);text-align:center}
+.notice strong{color:var(--ink)}
+
+/* hero */
+.hero{padding:48px 0 0;overflow:hidden}
+@media(min-width:768px){.hero{padding:72px 0 0}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-2);border-radius:999px;padding:6px 12px 6px 8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);background:var(--surface)}
+.eyebrow i{width:22px;height:22px;border-radius:999px;background:var(--gold-light);border:1px solid var(--warn-line);display:grid;place-items:center;font-style:normal;font-size:11px}
+.hero-grid{display:grid;gap:40px}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}}
+.hero h1{font-family:"IBM Plex Serif",serif;font-size:clamp(40px,6vw,64px);line-height:.95;letter-spacing:-.03em;margin:20px 0 18px;font-weight:700}
+.hero h1 em{font-style:normal;color:var(--gold-dark);font-weight:700;text-decoration:none;border-bottom:none}
+.hero-sub{font-size:18px;line-height:1.6;color:var(--ink-2);max-width:560px;margin:0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent}
+.btn-primary{background:var(--green);color:#fff}
+@media (prefers-color-scheme: dark){.btn-primary{background:var(--gold);color:#101613}}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;font-size:13px;color:var(--ink-3)}
+.hero-meta span{display:inline-flex;gap:6px;align-items:center}
+
+/* dual backing visual card */
+.backing-card{background:var(--green);color:#fff;border-radius:20px;padding:24px;position:relative;overflow:hidden}
+@media (prefers-color-scheme: dark){.backing-card{background:#182a22;border:1px solid var(--line)}}
+.backing-card::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;border:36px solid rgba(217,188,122,.18)}
+.backing-card h2{font-family:"IBM Plex Serif",serif;font-size:22px;margin:0 0 4px;position:relative;z-index:1}
+.backing-card p{margin:0;color:rgba(255,255,255,.78);font-size:14px;position:relative;z-index:1}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;position:relative;z-index:1}
+.dual-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:16px}
+.dual-box .icon{font-size:22px;margin-bottom:8px}
+.dual-box strong{display:block;font-size:15px;line-height:1.3}
+.dual-box span{font-size:12.5px;color:rgba(255,255,255,.72);line-height:1.45;display:block;margin-top:4px}
+.plus{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
+.plus-line{flex:1;height:1px;background:rgba(255,255,255,.2)}
+.plus-badge{width:36px;height:36px;border-radius:50%;background:var(--gold);color:#101613;display:grid;place-items:center;font-weight:700;font-size:18px;flex-shrink:0}
+.token-result{margin-top:16px;background:#fff;color:#101613;border-radius:14px;padding:16px;display:flex;gap:14px;align-items:center;position:relative;z-index:1}
+.token-coin{width:52px;height:52px;border-radius:50%;background:var(--gold-light);border:2px solid var(--gold);display:grid;place-items:center;font-family:"IBM Plex Serif",serif;font-weight:700;font-size:22px;color:var(--gold-dark);flex-shrink:0}
+.token-result strong{font-size:16px;line-height:1.3;display:block}
+.token-result span{font-size:13px;color:#5a655f;line-height:1.45;display:block}
+
+/* stats */
+.stats{margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr}
+@media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+.stat{padding:22px 18px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+@media(max-width:767px){.stat:nth-child(2){border-right:0}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}}
+.stat b{font-family:"IBM Plex Serif",serif;font-size:30px;line-height:1;letter-spacing:-.02em;display:block}
+.stat b small{font-size:16px;color:var(--gold-dark)}
+.stat span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--ink-3);display:block;margin-top:6px;line-height:1.4}
+
+/* sections */
+.section{padding:64px 0}
+@media(min-width:768px){.section{padding:84px 0}}
+.section.alt{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark);margin:0 0 10px}
+.section h2{font-family:"IBM Plex Serif",serif;font-size:clamp(30px,4vw,42px);line-height:1.05;letter-spacing:-.02em;margin:0 0 14px;max-width:680px}
+.section-lead{font-size:17px;color:var(--ink-2);max-width:680px;margin:0}
+.two-col{display:grid;gap:36px}
+@media(min-width:900px){.two-col{grid-template-columns:1fr 1fr;gap:56px;align-items:start}}
+
+/* flow infographic */
+.flow{margin-top:36px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+@media(min-width:768px){.flow{padding:30px}}
+.flow-steps{display:grid;gap:0}
+@media(min-width:820px){.flow-steps{grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:stretch}}
+.flow-step{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--bg)}
+.flow-step .num{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--gold-dark);text-transform:uppercase}
+.flow-step h3{margin:6px 0 6px;font-size:16px;line-height:1.3}
+.flow-step p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.55}
+.flow-arrow{display:grid;place-items:center;padding:8px;color:var(--ink-3);font-size:20px}
+@media(max-width:819px){.flow-arrow{transform:rotate(90deg);padding:2px}}
+.flow-note{margin-top:16px;padding:14px 16px;background:var(--gold-light);border:1px solid var(--warn-line);border-radius:12px;font-size:13.5px;color:var(--ink-2);line-height:1.55}
+.flow-note strong{color:var(--ink)}
+
+/* pillars */
+.pillars{display:grid;gap:16px;margin-top:32px}
+@media(min-width:768px){.pillars{grid-template-columns:repeat(3,1fr)}}
+.pillar{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.pillar-icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+.pillar:nth-child(1) .pillar-icon{background:var(--green-light)}
+.pillar:nth-child(2) .pillar-icon{background:var(--gold-light)}
+.pillar:nth-child(3) .pillar-icon{background:var(--bg-3)}
+.pillar h3{margin:0 0 8px;font-size:17px}
+.pillar p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.6}
+.pillar ul{margin:12px 0 0;padding:0;list-style:none}
+.pillar li{font-size:13.5px;padding:7px 0;border-top:1px dashed var(--line);display:flex;justify-content:space-between;gap:12px}
+.pillar li span{color:var(--ink-3)}
+.pillar li strong{font-weight:600;white-space:nowrap}
+
+/* charts */
+.chart-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
+.chart-card h3{margin:0 0 4px;font-size:18px}
+.chart-card>p{margin:0 0 18px;font-size:14px;color:var(--ink-2)}
+.donut-wrap{display:grid;gap:20px;align-items:center}
+@media(min-width:560px){.donut-wrap{grid-template-columns:200px 1fr}}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.legend button{width:100%;display:flex;align-items:center;gap:10px;text-align:left;background:transparent;border:1px solid transparent;border-radius:10px;padding:9px 10px;min-height:44px;cursor:pointer;font:inherit;color:var(--ink)}
+.legend button:hover,.legend button.active{border-color:var(--line);background:var(--bg-2)}
+.dot{width:12px;height:12px;border-radius:3px;flex-shrink:0}
+.legend .lbl{flex:1;font-size:14px;font-weight:500}
+.legend .val{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink-2)}
+.legend .amt{font-size:12px;color:var(--ink-3);display:block}
+.donut-detail{margin-top:14px;border-top:1px solid var(--line);padding-top:14px;font-size:14px;color:var(--ink-2);min-height:52px}
+.donut-detail strong{color:var(--ink)}
+
+/* waterfall */
+.stacked{height:44px;border-radius:10px;overflow:hidden;display:flex;border:1px solid var(--line)}
+.stacked div{height:100%}
+.wf-grid{display:grid;gap:12px;margin-top:16px}
+@media(min-width:768px){.wf-grid{grid-template-columns:repeat(3,1fr)}}
+.wf-item{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--bg)}
+.wf-item .pct{font-family:"IBM Plex Serif",serif;font-size:32px;line-height:1}
+.wf-item h4{margin:8px 0 4px;font-size:15px}
+.wf-item p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.55}
+.calc{margin-top:20px;border:1px dashed var(--line-2);border-radius:14px;padding:18px;background:var(--bg-2)}
+.calc label{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);display:block;margin-bottom:8px}
+.calc-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.calc input{flex:1;min-width:160px;min-height:48px;border:1px solid var(--line-2);border-radius:10px;padding:0 14px;font:inherit;font-size:16px;background:var(--surface);color:var(--ink)}
+.calc-results{display:grid;gap:8px;margin-top:14px}
+@media(min-width:640px){.calc-results{grid-template-columns:repeat(3,1fr)}}
+.calc-results div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px}
+.calc-results span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--ink-3);display:block}
+.calc-results strong{font-size:18px;font-family:"IBM Plex Mono",monospace}
+
+/* presale */
+.presale-card{background:#ffffff;color:#101613;border:1px solid var(--line-2);border-top:4px solid var(--gold);border-radius:20px;padding:28px;display:grid;gap:28px}
+@media(min-width:820px){.presale-card{grid-template-columns:1.2fr .8fr;padding:36px}}
+.presale-card h3{font-family:"IBM Plex Serif",serif;font-size:28px;line-height:1.1;margin:0 0 10px}
+.presale-card p{color:#3d4742;margin:0;font-size:15px;line-height:1.6}
+.progress{margin-top:22px}
+.progress-head{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:8px}
+.progress-track{height:12px;background:#e9e2d2;border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;width:4%;background:var(--gold-dark);border-radius:999px;transition:width 1s ease}
+.tiers{display:grid;gap:10px}
+.tier{border:1px solid var(--line-2);border-radius:14px;padding:16px;display:flex;justify-content:space-between;gap:16px;align-items:center;background:#f7f3ec}
+.tier strong{font-family:"IBM Plex Serif",serif;font-size:22px}
+.tier span{font-size:13px;color:#5a655f;display:block;line-height:1.4}
+.tier .tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:#101613;padding:4px 8px;border-radius:999px;white-space:nowrap}
+
+/* steps */
+.steps{display:grid;gap:14px;margin-top:32px;counter-reset:step}
+@media(min-width:768px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{border-top:3px solid var(--ink);padding-top:16px}
+.step:nth-child(2){border-color:var(--gold)}
+.step b{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3)}
+.step h3{margin:6px 0 6px;font-size:16px}
+.step p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.6}
+
+/* faq */
+.faq{margin-top:28px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;padding:18px 4px;font-weight:600;font-size:16px;min-height:52px;display:flex;align-items:center;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq details p{margin:0;padding:0 4px 18px;color:var(--ink-2);font-size:15px;line-height:1.65;max-width:720px}
+
+/* contact */
+.contact{background:var(--green);color:#fff;border-radius:20px;padding:28px}
+@media(min-width:768px){.contact{padding:36px}}
+@media (prefers-color-scheme: dark){.contact{background:#182a22;border:1px solid var(--line)}}
+.contact h2{color:#fff;margin:0 0 10px}
+.contact p{color:rgba(255,255,255,.78);max-width:560px}
+.contact-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.contact-links a{display:inline-flex;align-items:center;min-height:50px;padding:0 20px;border-radius:999px;font-weight:600;text-decoration:none;font-size:15px}
+.contact-links .mail{background:#fff;color:#101613}
+.contact-links .tel{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+
+/* disclaimer */
+.disclaimer{border:1px solid var(--warn-line);background:var(--warn-bg);border-radius:16px;padding:22px;margin:0 0 24px}
+.disclaimer h3{margin:0 0 10px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.disclaimer p{margin:0 0 10px;font-size:13.5px;line-height:1.65;color:var(--ink-2)}
+.disclaimer p:last-child{margin-bottom:0}
+footer{padding:36px 0 48px;border-top:1px solid var(--line)}
+.footer-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:start}
+footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:640px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top" aria-label="Project Nimble home">
+      <span class="mark">N</span>
+      <span><strong>Project Nimble</strong><span>projectnimble.us</span></span>
+    </a>
+    <nav class="nav" aria-label="Page">
+      <a href="#model">The Model</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#waterfall">NOI Waterfall</a>
+      <a href="#presale">Presale</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="top-cta" href="#contact">Contact the team</a>
+  </div>
+</header>
+
+<div class="notice" role="note">
+  <div class="wrap"><p><strong>Information only.</strong> This page summarises claims made by Project Nimble. It is not an offer to buy or sell securities, and those claims have not been independently verified. See the full disclaimer at the bottom of this page.</p></div>
+</div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow"><i>N</i> For Capital Investors · Presale 4% Filled</span>
+          <h1>Invest in <em>debt-free</em> real estate &amp; gold.</h1>
+          <p class="hero-sub">Capital investors can participate through (N) — a 500M fixed-supply token backed by multifamily apartment portfolios bought with 100% equity, no debt, and physical gold reserves. At presale, 50 million tokens are available at $0.01 per token, and no additional tokens will ever be minted. The presale is 4% filled. No minimum or maximum buy-in is stated.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#presale">See the presale — 4% filled ↓</a>
+            <a class="btn btn-secondary" href="#contact">Ask about investing</a>
+          </div>
+          <div class="hero-meta">
+            <span>✓ No stated minimum or maximum buy-in</span>
+            <span>✓ $0.01 presale price</span>
+            <span>✓ 50M tokens at presale · 500M fixed supply</span>
+            <span>✓ No tokens will ever be minted beyond 500M</span>
+            <span>✓ Presale 4% filled</span>
+            <span>✓ Debt-free acquisitions</span>
+          </div>
+        </div>
+
+        <div class="backing-card" aria-label="Dual backing summary">
+          <h2>Dual backing, in one view</h2>
+          <p>Two hard-asset pillars behind a single token — as described by Project Nimble.</p>
+          <div class="dual">
+            <div class="dual-box">
+              <div class="icon" aria-hidden="true">🏢</div>
+              <strong>Multifamily real estate</strong>
+              <span>Apartment portfolios acquired for $5M–$100M, purchased with 100% equity and no debt.</span>
+            </div>
+            <div class="dual-box">
+              <div class="icon" aria-hidden="true">◆</div>
+              <strong>Physical gold reserves</strong>
+              <span>Gold held as a reserve asset alongside the property portfolio.</span>
+            </div>
+          </div>
+          <div class="plus"><span class="plus-line"></span><span class="plus-badge">+</span><span class="plus-line"></span></div>
+          <div class="token-result">
+            <span class="token-coin">N</span>
+            <div><strong>(N) Token — 500,000,000 fixed</strong><span>Hard-capped supply. No additional tokens will ever be minted. 50 million tokens are available at presale at $0.01 per token. Blockchain provides the ownership and transfer record.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats" aria-label="Key figures as stated by Project Nimble">
+      <div class="wrap" style="padding-left:0;padding-right:0">
+        <div class="stats-grid">
+          <div class="stat"><b>500<small>M</small></b><span>Fixed (N) token supply</span></div>
+          <div class="stat"><b>$5M–$100M</b><span>Multifamily portfolio size</span></div>
+          <div class="stat"><b>100<small>% equity</small></b><span>Debt-free purchases</span></div>
+          <div class="stat"><b>None stated</b><span>Minimum or maximum buy-in</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODEL / INFOGRAPHIC -->
+  <section class="section" id="model">
+    <div class="wrap">
+      <p class="kicker">Infographic — The Model</p>
+      <h2>How capital flows through Project Nimble</h2>
+      <p class="section-lead">Presale proceeds fund Project Nimble's startup and operating costs. Capital is deployed into debt-free real estate and gold reserves, and the property income — net operating income (NOI) — is then split one-third each to real estate reserves, gold backing, and platform operations.</p>
+
+      <div class="flow" aria-label="Model flow diagram">
+        <div class="flow-steps">
+          <div class="flow-step"><span class="num">Step 01 — You</span><h3>Capital investor</h3><p>No stated minimum or maximum buy-in. You review the model and contact the team directly — there is no purchase button on this page.</p></div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step"><span class="num">Step 02 — Token</span><h3>(N) on blockchain</h3><p><strong>500M tokens, fixed — no additional tokens will ever be minted.</strong> 50M tokens are available at presale at <strong>$0.01 per token</strong>. Presale proceeds fund startup and operating costs.</p></div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step"><span class="num">Step 03 — Acquire</span><h3>Buy portfolios, no debt</h3><p>Multifamily apartment portfolios in the <strong>$5M–$100M</strong> range, bought with <strong>100% equity</strong>.</p></div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step"><span class="num">Step 04 — Income</span><h3>NOI waterfall</h3><p>Rental income after operating costs (NOI) is split <strong>one-third each</strong> — to real estate reserves, gold backing, and platform operations — detailed below.</p></div>
+        </div>
+        <div class="flow-note"><strong>Why debt-free matters in this model:</strong> With no mortgage on the portfolios, there is no lender claim ahead of the project and no interest payment taken out of NOI before the waterfall. That is the central claim of the Project Nimble structure — and, like all claims on this page, it has not been independently verified here.</div>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pillar-icon" aria-hidden="true">🏢</div>
+          <h3>1 &nbsp;Real estate</h3>
+          <p>Income-generating multifamily apartments are the operating engine — rent produces the NOI that feeds the waterfall.</p>
+          <ul>
+            <li><span>Portfolio size</span><strong>$5M–$100M</strong></li>
+            <li><span>Financing</span><strong>100% equity</strong></li>
+            <li><span>Debt</span><strong>None</strong></li>
+            <li><span>Asset type</span><strong>Multifamily</strong></li>
+          </ul>
+        </article>
+        <article class="pillar">
+          <div class="pillar-icon" aria-hidden="true">◆</div>
+          <h3>2 &nbsp;Gold</h3>
+          <p>The second backing pillar. One-third of NOI is directed to gold backing, so the reserve position is designed to grow from property income.</p>
+          <ul>
+            <li><span>NOI to gold</span><strong>One-third</strong></li>
+            <li><span>Role</span><strong>Reserve asset</strong></li>
+            <li><span>Backing type</span><strong>Physical gold</strong></li>
+          </ul>
+        </article>
+        <article class="pillar">
+          <div class="pillar-icon" aria-hidden="true">⛓</div>
+          <h3>3 &nbsp;Blockchain</h3>
+          <p>The (N) token is the record-keeping layer — a fixed, auditable supply that maps the allocation between investors, founder, team and partners. Holding tokens does not provide company equity, profit participation, dividends, or claims on company revenue.</p>
+          <ul>
+            <li><span>Total supply</span><strong>500M (N)</strong></li>
+            <li><span>Supply type</span><strong>Fixed — never more minted</strong></li>
+            <li><span>At presale</span><strong>50M (N) at $0.01</strong></li>
+            <li><span>To investors</span><strong>78%</strong></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOKENOMICS + WATERFALL -->
+  <section class="section alt" id="tokenomics">
+    <div class="wrap">
+      <p class="kicker">Tokenomics &amp; Income Split</p>
+      <h2>500 million tokens. One fixed split.</h2>
+      <p class="section-lead">50 million of those tokens are available at presale at $0.01 each, and no additional tokens will ever be minted. Tap any row to see what that slice represents. All figures below are the allocation and waterfall as stated by Project Nimble.</p>
+
+      <div class="two-col" style="margin-top:36px">
+        <div class="chart-card">
+          <h3>Token allocation — 500M (N)</h3>
+          <p>78% is allocated to investors. The remaining 22% covers founder, team, partnerships and pre-seed. Of the total fixed supply, 50M tokens are available at presale at $0.01 per token.</p>
+          <div class="donut-wrap">
+            <svg width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Donut chart: 78 percent investors, 10 percent founder, 5 percent team, 4 percent partnership, 3 percent pre-seed">
+              <!-- circumference for r=78 is ~490.1 -->
+              <circle cx="100" cy="100" r="78" fill="none" stroke="#e9e2d2" stroke-width="30"/>
+              <circle id="seg-investors" cx="100" cy="100" r="78" fill="none" stroke="#14342b" stroke-width="30" stroke-dasharray="382.3 490.1" transform="rotate(-90 100 100)"/>
+              <circle id="seg-founder" cx="100" cy="100" r="78" fill="none" stroke="#b9975b" stroke-width="30" stroke-dasharray="49 490.1" stroke-dashoffset="-382.3" transform="rotate(-90 100 100)"/>
+              <circle id="seg-team" cx="100" cy="100" r="78" fill="none" stroke="#5b7a6e" stroke-width="30" stroke-dasharray="24.5 490.1" stroke-dashoffset="-431.3" transform="rotate(-90 100 100)"/>
+              <circle id="seg-partner" cx="100" cy="100" r="78" fill="none" stroke="#8a9a92" stroke-width="30" stroke-dasharray="19.6 490.1" stroke-dashoffset="-455.8" transform="rotate(-90 100 100)"/>
+              <circle id="seg-preseed" cx="100" cy="100" r="78" fill="none" stroke="#d9bc7a" stroke-width="30" stroke-dasharray="14.7 490.1" stroke-dashoffset="-475.4" transform="rotate(-90 100 100)"/>
+              <text x="100" y="94" text-anchor="middle" font-family="IBM Plex Serif, serif" font-size="26" font-weight="700" fill="currentColor">500M</text>
+              <text x="100" y="114" text-anchor="middle" font-size="11" letter-spacing="1.5" fill="currentColor" opacity=".6">FIXED SUPPLY</text>
+            </svg>
+            <ul class="legend" id="allocLegend">
+              <li><button type="button" class="active" data-key="investors" data-title="Investors — 78% · 390M (N)" data-desc="The largest share by far. This is the pool allocated to capital investors participating in the token model."><span class="dot" style="background:#14342b"></span><span class="lbl">Investors<span class="amt">390,000,000 (N)</span></span><span class="val">78%</span></button></li>
+              <li><button type="button" data-key="founder" data-title="Founder — 10% · 50M (N)" data-desc="Allocated to the founder. One in ten tokens sits in this slice of the fixed supply."><span class="dot" style="background:#b9975b"></span><span class="lbl">Founder<span class="amt">50,000,000 (N)</span></span><span class="val">10%</span></button></li>
+              <li><button type="button" data-key="team" data-title="Team — 5% · 25M (N)" data-desc="Allocated to the team building and operating the platform and property programme."><span class="dot" style="background:#5b7a6e"></span><span class="lbl">Team<span class="amt">25,000,000 (N)</span></span><span class="val">5%</span></button></li>
+              <li><button type="button" data-key="partner" data-title="Partnership — 4% · 20M (N)" data-desc="Reserved for partnerships — the relationships that source and support portfolio acquisitions."><span class="dot" style="background:#8a9a92"></span><span class="lbl">Partnership<span class="amt">20,000,000 (N)</span></span><span class="val">4%</span></button></li>
+              <li><button type="button" data-key="preseed" data-title="Pre-seed — 3% · 15M (N)" data-desc="The smallest slice, allocated to pre-seed participation ahead of the wider investor allocation."><span class="dot" style="background:#d9bc7a"></span><span class="lbl">Pre-seed<span class="amt">15,000,000 (N)</span></span><span class="val">3%</span></button></li>
+            </ul>
+          </div>
+          <div class="donut-detail" id="allocDetail" aria-live="polite"><strong>Investors — 78% · 390M (N).</strong> The largest share by far. This is the pool allocated to capital investors participating in the token model.</div>
+        </div>
+
+        <div class="chart-card" id="waterfall">
+          <h3>NOI waterfall — where property income goes</h3>
+          <p>Net operating income from the apartment portfolios is split one-third each to real estate reserves, gold backing, and platform operations. No debt service comes off the top in this model, because purchases are 100% equity.</p>
+          <div class="stacked" role="img" aria-label="Stacked bar: one-third real estate reserves, one-third gold backing, one-third platform operations">
+            <div style="width:33.333%;background:#14342b"></div>
+            <div style="width:33.333%;background:#b9975b"></div>
+            <div style="width:33.334%;background:#8a9a92"></div>
+          </div>
+          <div class="wf-grid">
+            <div class="wf-item"><div class="pct">⅓</div><h4>Real estate reserves</h4><p>One-third of NOI — held for the property programme, reserves and future acquisitions.</p></div>
+            <div class="wf-item"><div class="pct" style="color:var(--gold-dark)">⅓</div><h4>Gold backing</h4><p>One-third of NOI — directed to building the physical gold reserve backing.</p></div>
+            <div class="wf-item"><div class="pct" style="color:var(--ink-3)">⅓</div><h4>Platform operations</h4><p>One-third of NOI — operations, running the platform and the portfolio programme.</p></div>
+          </div>
+
+          <div class="calc">
+            <label for="noiInput">Try it — enter a hypothetical NOI amount</label>
+            <div class="calc-row">
+              <input id="noiInput" type="number" min="0" step="1000" value="99999" inputmode="numeric" aria-describedby="calcNote">
+              <span style="font-size:13px;color:var(--ink-3)" id="calcNote">Illustration only — not a forecast or a promised return. Each third is shown rounded to the nearest dollar.</span>
+            </div>
+            <div class="calc-results" aria-live="polite">
+              <div><span>→ Real estate · ⅓</span><strong id="calcRE">$33,333</strong></div>
+              <div><span>→ Gold · ⅓</span><strong id="calcGold">$33,333</strong></div>
+              <div><span>→ Platform · ⅓</span><strong id="calcPlat">$33,333</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESALE -->
+  <section class="section" id="presale" style="padding-top:0">
+    <div class="wrap">
+      <div class="presale-card">
+        <div>
+          <p class="kicker" style="color:var(--gold-dark)">Presale — As Stated By Project Nimble</p>
+          <h3>$0.01 presale · 50M tokens available</h3>
+          <p>50 million tokens are available at presale at $0.01 per token, from the fixed 500 million token supply. No additional tokens will ever be minted. Presale proceeds fund Project Nimble's startup and operating costs.</p>
+          <p style="margin-top:12px">The presale figure published by Project Nimble at the time this page was prepared was 4% filled. No minimum or maximum buy-in is stated — unlike buying multifamily real estate directly, where a single portfolio in this programme is $5M–$100M.</p>
+          <div class="progress" aria-label="Presale 4 percent filled">
+            <div class="progress-head"><span>Presale filled</span><span>4%</span></div>
+            <div class="progress-track"><div class="progress-fill" id="presaleFill"></div></div>
+            <p style="font-size:12.5px;margin-top:8px">Figure as published by Project Nimble — not independently verified on this page.</p>
+          </div>
+          <div style="margin-top:18px;border:1px solid #d9bc7a;background:#f7ecd2;border-radius:12px;padding:14px 16px">
+            <p style="margin:0;font-size:13.5px;line-height:1.6;color:inherit"><strong style="color:var(--gold-dark)">What holding tokens does — and does not — provide:</strong> Holding tokens does not provide company equity, profit participation, dividends, or claims on company revenue.</p>
+          </div>
+        </div>
+        <div>
+          <div class="tiers" aria-label="Presale terms">
+            <div class="tier"><div><strong>$0.01</strong><span>Presale price per (N) token</span></div><span class="tag">Presale</span></div>
+            <div class="tier"><div><strong>50M (N)</strong><span>Available at presale — 10% of the fixed 500M supply</span></div></div>
+            <div class="tier"><div><strong>500M fixed</strong><span>Total supply. No additional tokens will ever be minted</span></div></div>
+            <div class="tier"><div><strong>No stated buy-in</strong><span>No minimum or maximum buy-in amount is stated</span></div><span class="tag">Open</span></div>
+          </div>
+          <div style="margin-top:12px;border:1px dashed #cbc4b2;border-radius:14px;padding:16px;background:#f2efe9">
+            <p style="margin:0 0 6px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark)">Illustrative example only</p>
+            <p style="margin:0;font-size:15px;line-height:1.55"><strong>$1 million at $0.01 = 100 million Nimble tokens</strong></p>
+            <p style="margin:6px 0 0;font-size:13px;line-height:1.55;opacity:.8">Pure price maths at the stated $0.01 presale price ($1,000,000 ÷ $0.01). This is an illustration of the price, not a buy-in amount, tier, minimum, or maximum.</p>
+          </div>
+          <p style="font-size:13px;margin-top:14px">Presale proceeds fund Project Nimble's startup and operating costs, as stated by Project Nimble. This page does not take payments or orders. To ask about participation, contact the team directly using the details below and do your own due diligence first.</p>
+        </div>
+      </div>
+
+      <div class="steps" aria-label="How to enquire">
+        <div class="step"><b>01</b><h3>Read the model</h3><p>Work through the dual-backing structure, the $0.01 presale for 50M tokens from the fixed 500M supply, and the one-third-each NOI waterfall on this page.</p></div>
+        <div class="step"><b>02</b><h3>Do your diligence</h3><p>Ask for documentation — property, gold custody, token terms — and take independent advice. Nothing here is verified.</p></div>
+        <div class="step"><b>03</b><h3>Contact the team</h3><p>Email <a href="mailto:Info@ProjectNimble.US">Info@ProjectNimble.US</a> or call <a href="tel:+15619844565">561-984-4565</a> with your questions.</p></div>
+        <div class="step"><b>04</b><h3>Decide for yourself</h3><p>Only proceed directly with Project Nimble if you are satisfied with the answers. This page is information only.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + CONTACT -->
+  <section class="section alt" id="faq" style="padding-top:56px">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <p class="kicker">Questions</p>
+          <h2 style="font-size:32px">Capital investor FAQ</h2>
+          <div class="faq">
+            <details open><summary>What backs the (N) token in this model?</summary><p>Two things, as described by Project Nimble: income-generating multifamily apartment portfolios bought with 100% equity and no debt, and physical gold reserves. That dual backing — real estate plus gold, recorded on blockchain — is the core of the pitch.</p></details>
+            <details><summary>Is there a minimum or maximum buy-in?</summary><p>No minimum or maximum buy-in is stated. This page does not collect money — contact Project Nimble directly at Info@ProjectNimble.US or 561-984-4565 to enquire.</p></details>
+            <details><summary>What is the presale price and how many tokens are available?</summary><p>The presale price is $0.01 per token, with 50 million tokens available at presale from the fixed 500 million supply. Presale proceeds fund Project Nimble's startup and operating costs. As an illustrative example only of the price maths: $1 million at $0.01 = 100 million Nimble tokens. That example is not a buy-in amount, tier, minimum, or maximum.</p></details>
+            <details><summary>How many tokens are there — will more be created?</summary><p>500 million (N), fixed. No additional tokens will ever be minted. The stated allocation is 78% investors (390M), 10% founder (50M), 5% team (25M), 4% partnership (20M) and 3% pre-seed (15M).</p></details>
+            <details><summary>Where does the rental income go?</summary><p>Net operating income (NOI) is split one-third each to real estate reserves, gold backing, and platform operations, according to Project Nimble.</p></details>
+            <details><summary>Does holding tokens give me equity or a share of profits?</summary><p>No. Holding tokens does not provide company equity, profit participation, dividends, or claims on company revenue.</p></details>
+            <details><summary>Is this an offer to invest?</summary><p>No. This page is for information only and is not an offer to buy or sell securities. The claims on it — including reserves, properties, supply and presale status — are Project Nimble's own and have not been independently verified here. Take independent financial and legal advice before making any decision.</p></details>
+          </div>
+        </div>
+
+        <div id="contact">
+          <div class="contact">
+            <p class="kicker" style="color:var(--gold-2)">Talk To Project Nimble</p>
+            <h2>Ask before you decide</h2>
+            <p>Questions about the model, the presale, documentation or the entry process — contact the team directly. There is a separate opportunity for real estate holders with 20+ units; mention which one you are asking about.</p>
+            <div class="contact-links">
+              <a class="mail" href="mailto:Info@ProjectNimble.US">✉ &nbsp;Info@ProjectNimble.US</a>
+              <a class="tel" href="tel:+15619844565">☎ &nbsp;561-984-4565</a>
+            </div>
+            <p style="font-size:13px;margin-top:18px">Website: projectnimble.us &nbsp;·&nbsp; Audience: capital investors &nbsp;·&nbsp; Buy-in: no stated minimum or maximum</p>
+          </div>
+          <div style="margin-top:16px;border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--surface)">
+            <h3 style="margin:0 0 8px;font-size:16px">Sell-sheet summary — take this with you</h3>
+            <p style="margin:0;font-size:14px;color:var(--ink-2);line-height:1.65"><strong style="color:var(--ink)">Model:</strong> Real estate + gold, dual-backed, on blockchain.<br><strong style="color:var(--ink)">Acquisitions:</strong> Multifamily portfolios, $5M–$100M, 100% equity, debt-free.<br><strong style="color:var(--ink)">Supply:</strong> 500M (N) fixed — 78 / 10 / 5 / 4 / 3. No additional tokens will ever be minted.<br><strong style="color:var(--ink)">Presale:</strong> $0.01 per token · 50M tokens available at presale · Proceeds fund startup and operating costs · 4% filled as stated · Buy-in: no stated minimum or maximum.<br><strong style="color:var(--ink)">Illustrative example:</strong> $1 million at $0.01 = 100 million Nimble tokens (price maths only).<br><strong style="color:var(--ink)">NOI:</strong> One-third each — real estate reserves · gold backing · platform operations.<br><strong style="color:var(--ink)">Holding tokens:</strong> Does not provide company equity, profit participation, dividends, or claims on company revenue.<br>Print this page (Ctrl / Cmd + P) to keep it as a one-page reference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disclaimer" role="note" aria-label="Disclaimer">
+      <h3>⚠ Important — Information Only · Not An Offer</h3>
+      <p><strong>This page is for general information only. It is not an offer to buy or sell securities, tokens, or any other financial product, and it is not financial, investment, legal, or tax advice.</strong> Nothing on this page should be relied on as a recommendation to invest, lend, or purchase anything.</p>
+      <p>All figures and claims on this page — including the 500M (N) token supply and its allocation (78% investors / 10% founder / 5% team / 4% partnership / 3% pre-seed), the $0.01 presale price, the 50 million tokens available at presale, the statement that no additional tokens will ever be minted, the statement that presale proceeds fund Project Nimble's startup and operating costs, the $5M–$100M debt-free multifamily acquisition model, gold reserves, the NOI split of one-third each to real estate reserves, gold backing, and platform operations, the statement that no minimum or maximum buy-in is stated, and the presale status shown as 4% filled — are statements made by or on behalf of Project Nimble (projectnimble.us). <strong>They have not been independently verified</strong> in the preparation of this page, and no assurance is given that they are accurate, complete, or current.</p>
+      <p><strong>Holding tokens does not provide company equity, profit participation, dividends, or claims on company revenue.</strong> The illustrative example on this page — $1 million at $0.01 = 100 million Nimble tokens — is price maths only; it is not a buy-in amount, tier, minimum, or maximum, and it is not a forecast or promise of value or return.</p>
+      <p>Any investment or token purchase involves risk, including possible loss of the full amount. Past or projected property income (NOI) is not a guarantee of future results. Before making any decision, review original documentation from Project Nimble, verify claims independently, and consult your own qualified financial and legal advisers.</p>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <p><strong style="color:var(--ink)">Project Nimble — Capital Investors</strong><br>Real Estate. Gold. Blockchain. · projectnimble.us<br>Contact: <a href="mailto:Info@ProjectNimble.US">Info@ProjectNimble.US</a> · <a href="tel:+15619844565">561-984-4565</a></p>
+      </div>
+      <p style="text-align:left;max-width:420px">This is the capital-investor page. A separate page covers the opportunity for real estate holders with 20+ units. Figures above are as stated by Project Nimble when this page was prepared on 17 November 2026.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Token allocation explorer
+  var detail = document.getElementById('allocDetail');
+  var buttons = document.querySelectorAll('#allocLegend button');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      detail.innerHTML = '<strong>' + btn.getAttribute('data-title') + '.</strong> ' + btn.getAttribute('data-desc');
+    });
+  });
+
+  // NOI calculator
+  var input = document.getElementById('noiInput');
+  var gold = document.getElementById('calcGold');
+  var re = document.getElementById('calcRE');
+  var plat = document.getElementById('calcPlat');
+  function fmt(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+  function update(){
+    var v = parseFloat(input.value);
+    if (isNaN(v) || v < 0) v = 0;
+    var third = v / 3;
+    gold.textContent = fmt(third);
+    re.textContent = fmt(third);
+    plat.textContent = fmt(third);
+  }
+  if (input){ input.addEventListener('input', update); update(); }
+
+  // Animate presale bar when visible (respects reduced motion via CSS transition none)
+  var fill = document.getElementById('presaleFill');
+  if (fill){
+    fill.style.width = '0%';
+    var io = ('IntersectionObserver' in window) ? new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ fill.style.width = '4%'; io.disconnect(); } });
+    }, {threshold: 0.3}) : null;
+    if (io) io.observe(fill); else fill.style.width = '4%';
+  }
+})();
+</script>
+</body>
+</html>
