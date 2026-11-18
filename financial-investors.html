@@ -12,45 +12,45 @@
 <style>
 :root{
   --bg:#ffffff;
-  --bg-2:#f4efe3;
-  --bg-3:#eae1cc;
+  --bg-2:#edf0f2;
+  --bg-3:#dde3e8;
   --surface:#ffffff;
   --ink:#101613;
-  --ink-2:#4a443a;
-  --ink-3:#7d7462;
-  --line:#ded4bd;
-  --line-2:#c8b995;
+  --ink-2:#3f4a53;
+  --ink-3:#687682;
+  --line:#ccd4da;
+  --line-2:#a3b2bd;
   --green:#14342b;
   --green-2:#1e4d3f;
-  --green-light:#ede4cd;
+  --green-light:#dce6e1;
   --gold:#b9975b;
   --gold-dark:#8a6f35;
-  --gold-light:#f2e8c8;
+  --gold-light:#e3e7d5;
   --gold-2:#d9bc7a;
   --accent:#14342b;
-  --warn-bg:#fbf4d9;
-  --warn-line:#e3c87a;
+  --warn-bg:#e9efec;
+  --warn-line:#c2b489;
   --radius:14px;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#131109;
-    --bg-2:#1a1710;
-    --bg-3:#242017;
-    --surface:#1c1913;
-    --ink:#f2efe9;
-    --ink-2:#cfc8b8;
-    --ink-3:#a79d89;
-    --line:#38322a;
-    --line-2:#4d4636;
+    --bg:#0e1216;
+    --bg-2:#151a1f;
+    --bg-3:#1f262d;
+    --surface:#171d22;
+    --ink:#edf1f4;
+    --ink-2:#bfc9d1;
+    --ink-3:#8d99a4;
+    --line:#2c343c;
+    --line-2:#3f4a54;
     --green:#d9bc7a;
     --green-2:#e6d5a3;
-    --green-light:#2a2517;
+    --green-light:#1d2b25;
     --gold:#d9bc7a;
     --gold-dark:#d9bc7a;
-    --gold-light:#2a2415;
-    --warn-bg:#241e0f;
-    --warn-line:#5c4d1f;
+    --gold-light:#232820;
+    --warn-bg:#1a2420;
+    --warn-line:#57503a;
     --accent:#d9bc7a;
   }
 }
@@ -113,7 +113,7 @@ img,svg{display:block;max-width:100%}
 .token-result{margin-top:16px;background:#fff;color:#101613;border-radius:14px;padding:16px;display:flex;gap:14px;align-items:center;position:relative;z-index:1}
 .token-coin{width:52px;height:52px;border-radius:50%;background:var(--gold-light);border:2px solid var(--gold);display:grid;place-items:center;font-family:"IBM Plex Serif",serif;font-weight:700;font-size:22px;color:var(--gold-dark);flex-shrink:0}
 .token-result strong{font-size:16px;line-height:1.3;display:block}
-.token-result span{font-size:13px;color:#6f6656;line-height:1.45;display:block}
+.token-result span{font-size:13px;color:#5c6973;line-height:1.45;display:block}
 
 /* stats */
 .stats{margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
@@ -204,15 +204,15 @@ img,svg{display:block;max-width:100%}
 .presale-card{background:#ffffff;color:#101613;border:1px solid var(--line-2);border-top:4px solid var(--gold);border-radius:20px;padding:28px;display:grid;gap:28px}
 @media(min-width:820px){.presale-card{grid-template-columns:1.2fr .8fr;padding:36px}}
 .presale-card h3{font-family:"IBM Plex Serif",serif;font-size:28px;line-height:1.1;margin:0 0 10px}
-.presale-card p{color:#4a443a;margin:0;font-size:15px;line-height:1.6}
+.presale-card p{color:#3f4a53;margin:0;font-size:15px;line-height:1.6}
 .progress{margin-top:22px}
 .progress-head{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:8px}
-.progress-track{height:12px;background:#e9e0cb;border-radius:999px;overflow:hidden}
+.progress-track{height:12px;background:#dbe2e7;border-radius:999px;overflow:hidden}
 .progress-fill{height:100%;width:4%;background:var(--gold-dark);border-radius:999px;transition:width 1s ease}
 .tiers{display:grid;gap:10px}
-.tier{border:1px solid var(--line-2);border-radius:14px;padding:16px;display:flex;justify-content:space-between;gap:16px;align-items:center;background:#f6f2e7}
+.tier{border:1px solid var(--line-2);border-radius:14px;padding:16px;display:flex;justify-content:space-between;gap:16px;align-items:center;background:#edf0f2}
 .tier strong{font-family:"IBM Plex Serif",serif;font-size:22px}
-.tier span{font-size:13px;color:#6f6656;display:block;line-height:1.4}
+.tier span{font-size:13px;color:#5c6973;display:block;line-height:1.4}
 .tier .tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:#101613;padding:4px 8px;border-radius:999px;white-space:nowrap}
 
 /* steps */
@@ -275,14 +275,15 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
         <div>
           <span class="eyebrow"><i>N</i> For Capital Investors · Presale 4% Filled</span>
           <h1>Invest in <em>debt-free</em> real estate &amp; gold.</h1>
-          <p class="hero-sub">Capital investors can participate through (N) — a 500M fixed-supply token backed by multifamily apartment portfolios bought with 100% equity, no debt, and physical gold reserves. At presale, 50 million tokens are available at $0.01 per token, and no additional tokens will ever be minted. The presale is 4% filled. No minimum or maximum buy-in is stated.</p>
+          <p class="hero-sub">Capital investors can participate through (N) — a 500M fixed-supply utility and settlement token backed first by 100% owned, debt-free multifamily real estate and second by physical gold reserves. At presale, 50 million tokens are available at $0.01 per token as an early-adopter incentive; once those 50 million are sold, the price goes to $0.50 per token. No additional tokens will ever be minted. The presale is 4% filled.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#presale">See the presale — 4% filled ↓</a>
             <a class="btn btn-secondary" href="#contact">Ask about investing</a>
           </div>
           <div class="hero-meta">
-            <span>✓ No stated minimum or maximum buy-in</span>
+            <span>✓ No minimum or maximum buy-in</span>
             <span>✓ $0.01 presale price</span>
+            <span>✓ $0.50 per token after presale</span>
             <span>✓ 50M tokens at presale · 500M fixed supply</span>
             <span>✓ No tokens will ever be minted beyond 500M</span>
             <span>✓ Presale 4% filled</span>
@@ -292,23 +293,23 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
 
         <div class="backing-card" aria-label="Dual backing summary">
           <h2>Dual backing, in one view</h2>
-          <p>Two hard-asset pillars behind a single token — as described by Project Nimble.</p>
+          <p>Two hard-asset pillars behind a single token.</p>
           <div class="dual">
             <div class="dual-box">
               <div class="icon" aria-hidden="true">🏢</div>
               <strong>Multifamily real estate</strong>
-              <span>Apartment portfolios acquired for $5M–$100M, purchased with 100% equity and no debt.</span>
+              <span>Apartment portfolios acquired for $5M–$100M, purchased with 100% equity and no debt. This is the first backing: $1,000,000 in property value = $1,000,000 in value backing the tokens.</span>
             </div>
             <div class="dual-box">
               <div class="icon" aria-hidden="true">◆</div>
               <strong>Physical gold reserves</strong>
-              <span>Gold held as a reserve asset alongside the property portfolio.</span>
+              <span>Gold held as a reserve asset, built from monthly NOI deposits into the gold storage account — the second backing.</span>
             </div>
           </div>
           <div class="plus"><span class="plus-line"></span><span class="plus-badge">+</span><span class="plus-line"></span></div>
           <div class="token-result">
             <span class="token-coin">N</span>
-            <div><strong>(N) Token — 500,000,000 fixed</strong><span>Hard-capped supply. No additional tokens will ever be minted. 50 million tokens are available at presale at $0.01 per token. Blockchain provides the ownership and transfer record.</span></div>
+            <div><strong>(N) Token — 500,000,000 fixed</strong><span>Hard-capped supply. No additional tokens will ever be minted. 50 million tokens are available at presale at $0.01 per token, then $0.50 per token. (N) is a utility and settlement instrument for ecosystem liquidity, platform usage and access to platform services.</span></div>
           </div>
         </div>
       </div>
@@ -320,7 +321,7 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
           <div class="stat"><b>500<small>M</small></b><span>Fixed (N) token supply</span></div>
           <div class="stat"><b>$5M–$100M</b><span>Multifamily portfolio size</span></div>
           <div class="stat"><b>100<small>% equity</small></b><span>Debt-free purchases</span></div>
-          <div class="stat"><b>None stated</b><span>Minimum or maximum buy-in</span></div>
+          <div class="stat"><b>No min / max</b><span>Buy-in amount</span></div>
         </div>
       </div>
     </div>
@@ -331,17 +332,17 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
     <div class="wrap">
       <p class="kicker">Infographic — The Model</p>
       <h2>How capital flows through Project Nimble</h2>
-      <p class="section-lead">Presale proceeds fund Project Nimble's startup and operating costs. Capital is deployed into debt-free real estate and gold reserves, and the property income — net operating income (NOI) — is then split one-third each to real estate reserves, gold backing, and platform operations.</p>
+      <p class="section-lead">Presale proceeds fund Project Nimble's startup and operating costs only. Capital is deployed into debt-free real estate and gold reserves, and the property income — net operating income (NOI) — is then split one-third each to the gold storage account, the real estate reserve account, and the Nimble platform for operations.</p>
 
       <div class="flow" aria-label="Model flow diagram">
         <div class="flow-steps">
-          <div class="flow-step"><span class="num">Step 01 — You</span><h3>Capital investor</h3><p>No stated minimum or maximum buy-in. You review the model and contact the team directly — there is no purchase button on this page.</p></div>
+          <div class="flow-step"><span class="num">Step 01 — You</span><h3>Capital investor</h3><p>No minimum or maximum buy-in. You review the model and contact the team directly — there is no purchase button on this page.</p></div>
           <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-step"><span class="num">Step 02 — Token</span><h3>(N) on blockchain</h3><p><strong>500M tokens, fixed — no additional tokens will ever be minted.</strong> 50M tokens are available at presale at <strong>$0.01 per token</strong>. Presale proceeds fund startup and operating costs.</p></div>
+          <div class="flow-step"><span class="num">Step 02 — Token</span><h3>(N) on blockchain</h3><p><strong>500M tokens, fixed — no additional tokens will ever be minted.</strong> 50M tokens are available at presale at <strong>$0.01 per token</strong> as an early-adopter incentive; after those 50M are sold, the price is <strong>$0.50 per token</strong>. Presale proceeds fund startup and operating costs only.</p></div>
           <div class="flow-arrow" aria-hidden="true">→</div>
           <div class="flow-step"><span class="num">Step 03 — Acquire</span><h3>Buy portfolios, no debt</h3><p>Multifamily apartment portfolios in the <strong>$5M–$100M</strong> range, bought with <strong>100% equity</strong>.</p></div>
           <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-step"><span class="num">Step 04 — Income</span><h3>NOI waterfall</h3><p>Rental income after operating costs (NOI) is split <strong>one-third each</strong> — to real estate reserves, gold backing, and platform operations — detailed below.</p></div>
+          <div class="flow-step"><span class="num">Step 04 — Income</span><h3>NOI waterfall</h3><p>Rental income after operating costs (NOI) is split <strong>one-third each</strong> — to the gold storage account, the real estate reserve account, and the Nimble platform for operations — detailed below.</p></div>
         </div>
         <div class="flow-note"><strong>Why debt-free matters in this model:</strong> With no mortgage on the portfolios, there is no lender claim ahead of the project and no interest payment taken out of NOI before the waterfall. That is the central claim of the Project Nimble structure.</div>
       </div>
@@ -350,7 +351,7 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
         <article class="pillar">
           <div class="pillar-icon" aria-hidden="true">🏢</div>
           <h3>1 &nbsp;Real estate</h3>
-          <p>Income-generating multifamily apartments are the operating engine — rent produces the NOI that feeds the waterfall.</p>
+          <p>The first backing for (N). 100% owned multifamily apartments give the tokens real value: a $1,000,000 property value = $1,000,000 in value backing the tokens. Rent produces the NOI that feeds the waterfall.</p>
           <ul>
             <li><span>Portfolio size</span><strong>$5M–$100M</strong></li>
             <li><span>Financing</span><strong>100% equity</strong></li>
@@ -361,7 +362,7 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
         <article class="pillar">
           <div class="pillar-icon" aria-hidden="true">◆</div>
           <h3>2 &nbsp;Gold</h3>
-          <p>The second backing pillar. One-third of NOI is directed to gold backing, so the reserve position is designed to grow from property income.</p>
+          <p>The second backing. One-third of monthly NOI goes into the gold storage account, so the gold reserve backing grows month by month from property income.</p>
           <ul>
             <li><span>NOI to gold</span><strong>One-third</strong></li>
             <li><span>Role</span><strong>Reserve asset</strong></li>
@@ -371,7 +372,7 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
         <article class="pillar">
           <div class="pillar-icon" aria-hidden="true">⛓</div>
           <h3>3 &nbsp;Blockchain</h3>
-          <p>The (N) token is the record-keeping layer — a fixed, auditable supply that maps the allocation between investors, founder, team and partners. Holding tokens does not provide company equity, profit participation, dividends, or claims on company revenue.</p>
+          <p>(N) is a utility and settlement instrument within the Nimble platform ecosystem. Its purpose is to support ecosystem liquidity, platform usage, and access to platform services, including property acquisition workflows, settlement mechanisms, and collateralizing operational functions. Holding (N) does not convey equity, company profit participation, dividends, or claims on company revenues.</p>
           <ul>
             <li><span>Total supply</span><strong>500M (N)</strong></li>
             <li><span>Supply type</span><strong>Fixed — never more minted</strong></li>
@@ -388,20 +389,20 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
     <div class="wrap">
       <p class="kicker">Tokenomics &amp; Income Split</p>
       <h2>500 million tokens. One fixed split.</h2>
-      <p class="section-lead">50 million of those tokens are available at presale at $0.01 each, and no additional tokens will ever be minted. Tap any row to see what that slice represents. All figures below are the allocation and waterfall as stated by Project Nimble.</p>
+      <p class="section-lead">50 million of those tokens are available at presale at $0.01 each as an early-adopter incentive; after those 50 million are sold, the price goes to $0.50 per token. No additional tokens will ever be minted. Tap any row to see what that slice represents. All figures below are the allocation and waterfall as stated by Project Nimble.</p>
 
       <div class="two-col" style="margin-top:36px">
         <div class="chart-card">
           <h3>Token allocation — 500M (N)</h3>
-          <p>78% is allocated to investors. The remaining 22% covers founder, team, partnerships and pre-seed. Of the total fixed supply, 50M tokens are available at presale at $0.01 per token.</p>
+          <p>78% is allocated to investors. The remaining 22% covers founder, team, partnerships and pre-seed. Of the total fixed supply, 50M tokens are available at presale at $0.01 per token, then $0.50 per token after the presale allocation is sold.</p>
           <div class="donut-wrap">
             <svg width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Donut chart: 78 percent investors, 10 percent founder, 5 percent team, 4 percent partnership, 3 percent pre-seed">
               <!-- circumference for r=78 is ~490.1 -->
-              <circle cx="100" cy="100" r="78" fill="none" stroke="#e9e0cb" stroke-width="30"/>
+              <circle cx="100" cy="100" r="78" fill="none" stroke="#d5dde2" stroke-width="30"/>
               <circle id="seg-investors" cx="100" cy="100" r="78" fill="none" stroke="#14342b" stroke-width="30" stroke-dasharray="382.3 490.1" transform="rotate(-90 100 100)"/>
               <circle id="seg-founder" cx="100" cy="100" r="78" fill="none" stroke="#b9975b" stroke-width="30" stroke-dasharray="49 490.1" stroke-dashoffset="-382.3" transform="rotate(-90 100 100)"/>
-              <circle id="seg-team" cx="100" cy="100" r="78" fill="none" stroke="#8a7a56" stroke-width="30" stroke-dasharray="24.5 490.1" stroke-dashoffset="-431.3" transform="rotate(-90 100 100)"/>
-              <circle id="seg-partner" cx="100" cy="100" r="78" fill="none" stroke="#b3a586" stroke-width="30" stroke-dasharray="19.6 490.1" stroke-dashoffset="-455.8" transform="rotate(-90 100 100)"/>
+              <circle id="seg-team" cx="100" cy="100" r="78" fill="none" stroke="#5d7282" stroke-width="30" stroke-dasharray="24.5 490.1" stroke-dashoffset="-431.3" transform="rotate(-90 100 100)"/>
+              <circle id="seg-partner" cx="100" cy="100" r="78" fill="none" stroke="#8fa3b0" stroke-width="30" stroke-dasharray="19.6 490.1" stroke-dashoffset="-455.8" transform="rotate(-90 100 100)"/>
               <circle id="seg-preseed" cx="100" cy="100" r="78" fill="none" stroke="#d9bc7a" stroke-width="30" stroke-dasharray="14.7 490.1" stroke-dashoffset="-475.4" transform="rotate(-90 100 100)"/>
               <text x="100" y="94" text-anchor="middle" font-family="IBM Plex Serif, serif" font-size="26" font-weight="700" fill="currentColor">500M</text>
               <text x="100" y="114" text-anchor="middle" font-size="11" letter-spacing="1.5" fill="currentColor" opacity=".6">FIXED SUPPLY</text>
@@ -409,8 +410,8 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
             <ul class="legend" id="allocLegend">
               <li><button type="button" class="active" data-key="investors" data-title="Investors — 78% · 390M (N)" data-desc="The largest share by far. This is the pool allocated to capital investors participating in the token model."><span class="dot" style="background:#14342b"></span><span class="lbl">Investors<span class="amt">390,000,000 (N)</span></span><span class="val">78%</span></button></li>
               <li><button type="button" data-key="founder" data-title="Founder — 10% · 50M (N)" data-desc="Allocated to the founder. One in ten tokens sits in this slice of the fixed supply."><span class="dot" style="background:#b9975b"></span><span class="lbl">Founder<span class="amt">50,000,000 (N)</span></span><span class="val">10%</span></button></li>
-              <li><button type="button" data-key="team" data-title="Team — 5% · 25M (N)" data-desc="Allocated to the team building and operating the platform and property programme."><span class="dot" style="background:#8a7a56"></span><span class="lbl">Team<span class="amt">25,000,000 (N)</span></span><span class="val">5%</span></button></li>
-              <li><button type="button" data-key="partner" data-title="Partnership — 4% · 20M (N)" data-desc="Reserved for partnerships — the relationships that source and support portfolio acquisitions."><span class="dot" style="background:#b3a586"></span><span class="lbl">Partnership<span class="amt">20,000,000 (N)</span></span><span class="val">4%</span></button></li>
+              <li><button type="button" data-key="team" data-title="Team — 5% · 25M (N)" data-desc="Allocated to the team building and operating the platform and property programme."><span class="dot" style="background:#5d7282"></span><span class="lbl">Team<span class="amt">25,000,000 (N)</span></span><span class="val">5%</span></button></li>
+              <li><button type="button" data-key="partner" data-title="Partnership — 4% · 20M (N)" data-desc="Reserved for partnerships — the relationships that source and support portfolio acquisitions."><span class="dot" style="background:#8fa3b0"></span><span class="lbl">Partnership<span class="amt">20,000,000 (N)</span></span><span class="val">4%</span></button></li>
               <li><button type="button" data-key="preseed" data-title="Pre-seed — 3% · 15M (N)" data-desc="The smallest slice, allocated to pre-seed participation ahead of the wider investor allocation."><span class="dot" style="background:#d9bc7a"></span><span class="lbl">Pre-seed<span class="amt">15,000,000 (N)</span></span><span class="val">3%</span></button></li>
             </ul>
           </div>
@@ -419,16 +420,16 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
 
         <div class="chart-card" id="waterfall">
           <h3>NOI waterfall — where property income goes</h3>
-          <p>Net operating income from the apartment portfolios is split one-third each to real estate reserves, gold backing, and platform operations. No debt service comes off the top in this model, because purchases are 100% equity.</p>
-          <div class="stacked" role="img" aria-label="Stacked bar: one-third real estate reserves, one-third gold backing, one-third platform operations">
-            <div style="width:33.333%;background:#14342b"></div>
+          <p>Net operating income from the apartment portfolios is split one-third each to the gold storage account, the real estate reserve account, and the Nimble platform for operations. The gold and real estate reserve thirds are ongoing backing, built from monthly NOI deposits. No debt service comes off the top in this model, because purchases are 100% equity.</p>
+          <div class="stacked" role="img" aria-label="Stacked bar: one-third gold storage account, one-third real estate reserve account, one-third Nimble platform operations">
             <div style="width:33.333%;background:#b9975b"></div>
-            <div style="width:33.334%;background:#b3a586"></div>
+            <div style="width:33.333%;background:#14342b"></div>
+            <div style="width:33.334%;background:#8fa3b0"></div>
           </div>
           <div class="wf-grid">
-            <div class="wf-item"><div class="pct">⅓</div><h4>Real estate reserves</h4><p>One-third of NOI — held for the property programme, reserves and future acquisitions.</p></div>
-            <div class="wf-item"><div class="pct" style="color:var(--gold-dark)">⅓</div><h4>Gold backing</h4><p>One-third of NOI — directed to building the physical gold reserve backing.</p></div>
-            <div class="wf-item"><div class="pct" style="color:var(--ink-3)">⅓</div><h4>Platform operations</h4><p>One-third of NOI — operations, running the platform and the portfolio programme.</p></div>
+            <div class="wf-item"><div class="pct" style="color:var(--gold-dark)">⅓</div><h4>Gold storage account</h4><p>One-third of NOI — deposited monthly into the gold storage account, building the gold backing for (N).</p></div>
+            <div class="wf-item"><div class="pct">⅓</div><h4>Real estate reserve account</h4><p>One-third of NOI — deposited monthly into the real estate reserve account, held for the property programme, reserves and future acquisitions, and adding to the token backing.</p></div>
+            <div class="wf-item"><div class="pct" style="color:var(--ink-3)">⅓</div><h4>Nimble platform — operations</h4><p>One-third of NOI — to Project Nimble for operations, running the platform and the portfolio programme.</p></div>
           </div>
 
           <div class="calc">
@@ -438,8 +439,8 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
               <span style="font-size:13px;color:var(--ink-3)" id="calcNote">Each third is shown rounded to the nearest dollar.</span>
             </div>
             <div class="calc-results" aria-live="polite">
-              <div><span>→ Real estate · ⅓</span><strong id="calcRE">$33,333</strong></div>
-              <div><span>→ Gold · ⅓</span><strong id="calcGold">$33,333</strong></div>
+              <div><span>→ Gold storage · ⅓</span><strong id="calcGold">$33,333</strong></div>
+              <div><span>→ Real estate reserve · ⅓</span><strong id="calcRE">$33,333</strong></div>
               <div><span>→ Platform · ⅓</span><strong id="calcPlat">$33,333</strong></div>
             </div>
           </div>
@@ -455,8 +456,8 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
         <div>
           <p class="kicker" style="color:var(--gold-dark)">Presale — As Stated By Project Nimble</p>
           <h3>$0.01 presale · 50M tokens available</h3>
-          <p>50 million tokens are available at presale at $0.01 per token, from the fixed 500 million token supply. No additional tokens will ever be minted. Presale proceeds fund Project Nimble's startup and operating costs.</p>
-          <p style="margin-top:12px">The presale figure published by Project Nimble at the time this page was prepared was 4% filled. No minimum or maximum buy-in is stated — unlike buying multifamily real estate directly, where a single portfolio in this programme is $5M–$100M.</p>
+          <p>50 million tokens are available at presale at $0.01 per token, from the fixed 500 million token supply — an early-adopter incentive. Once those 50 million tokens are sold, the presale window closes and the price goes to $0.50 per token. No additional tokens will ever be minted. Presale proceeds fund Project Nimble's startup and operating costs only.</p>
+          <p style="margin-top:12px">The presale figure published by Project Nimble at the time this page was prepared was 4% filled. There is no minimum or maximum buy-in — unlike buying multifamily real estate directly, where a single portfolio in this programme is $5M–$100M.</p>
           <div class="progress" aria-label="Presale 4 percent filled">
             <div class="progress-head"><span>Presale filled</span><span>4%</span></div>
             <div class="progress-track"><div class="progress-fill" id="presaleFill"></div></div>
@@ -464,22 +465,23 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
         </div>
         <div>
           <div class="tiers" aria-label="Presale terms">
-            <div class="tier"><div><strong>$0.01</strong><span>Presale price per (N) token</span></div><span class="tag">Presale</span></div>
+            <div class="tier"><div><strong>$0.01</strong><span>Presale price per (N) token — early-adopter incentive</span></div><span class="tag">Presale</span></div>
+            <div class="tier"><div><strong>$0.50</strong><span>Price per (N) token after the 50M presale allocation is sold</span></div><span class="tag">After presale</span></div>
             <div class="tier"><div><strong>50M (N)</strong><span>Available at presale — 10% of the fixed 500M supply</span></div></div>
             <div class="tier"><div><strong>500M fixed</strong><span>Total supply. No additional tokens will ever be minted</span></div></div>
-            <div class="tier"><div><strong>No stated buy-in</strong><span>No minimum or maximum buy-in amount is stated</span></div><span class="tag">Open</span></div>
+            <div class="tier"><div><strong>No buy-in limit</strong><span>No minimum or maximum buy-in amount</span></div><span class="tag">Open</span></div>
           </div>
-          <div style="margin-top:12px;border:1px dashed #c8b995;border-radius:14px;padding:16px;background:#f4efe2">
+          <div style="margin-top:12px;border:1px dashed #a3b2bd;border-radius:14px;padding:16px;background:#edf0f2">
             <p style="margin:0 0 6px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark)">Illustrative example only</p>
             <p style="margin:0;font-size:15px;line-height:1.55"><strong>$1 million at $0.01 = 100 million Nimble tokens</strong></p>
             <p style="margin:6px 0 0;font-size:13px;line-height:1.55;opacity:.8">Pure price maths at the stated $0.01 presale price ($1,000,000 ÷ $0.01). This is an illustration of the price, not a buy-in amount, tier, minimum, or maximum.</p>
           </div>
-          <p style="font-size:13px;margin-top:14px">Presale proceeds fund Project Nimble's startup and operating costs, as stated by Project Nimble. To ask about participation, contact the team directly using the details below.</p>
+          <p style="font-size:13px;margin-top:14px">Presale proceeds fund Project Nimble's startup and operating costs only. To ask about participation, contact the team directly using the details below.</p>
         </div>
       </div>
 
       <div class="steps" aria-label="How to enquire">
-        <div class="step"><b>01</b><h3>Read the model</h3><p>Work through the dual-backing structure, the $0.01 presale for 50M tokens from the fixed 500M supply, and the one-third-each NOI waterfall on this page.</p></div>
+        <div class="step"><b>01</b><h3>Read the model</h3><p>Work through the dual-backing structure, the $0.01 presale for 50M tokens from the fixed 500M supply (then $0.50 per token), and the one-third-each NOI waterfall on this page.</p></div>
         <div class="step"><b>02</b><h3>Do your diligence</h3><p>Ask for documentation — property, gold custody, token terms.</p></div>
         <div class="step"><b>03</b><h3>Contact the team</h3><p>Email <a href="mailto:Info@ProjectNimble.US">Info@ProjectNimble.US</a> or call <a href="tel:+15619844565">561-984-4565</a> with your questions.</p></div>
         <div class="step"><b>04</b><h3>Decide for yourself</h3><p>Only proceed directly with Project Nimble if you are satisfied with the answers.</p></div>
@@ -495,12 +497,12 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
           <p class="kicker">Questions</p>
           <h2 style="font-size:32px">Capital investor FAQ</h2>
           <div class="faq">
-            <details open><summary>What backs the (N) token in this model?</summary><p>Two things, as described by Project Nimble: income-generating multifamily apartment portfolios bought with 100% equity and no debt, and physical gold reserves. That dual backing — real estate plus gold, recorded on blockchain — is the core of the pitch.</p></details>
-            <details><summary>Is there a minimum or maximum buy-in?</summary><p>No minimum or maximum buy-in is stated. This page does not collect money — contact Project Nimble directly at Info@ProjectNimble.US or 561-984-4565 to enquire.</p></details>
-            <details><summary>What is the presale price and how many tokens are available?</summary><p>The presale price is $0.01 per token, with 50 million tokens available at presale from the fixed 500 million supply. Presale proceeds fund Project Nimble's startup and operating costs. As an illustrative example only of the price maths: $1 million at $0.01 = 100 million Nimble tokens. That example is not a buy-in amount, tier, minimum, or maximum.</p></details>
+            <details open><summary>What backs the (N) token in this model?</summary><p>First, 100% owned real estate: income-generating multifamily apartment portfolios bought with 100% equity and no debt. A $1,000,000 property value = $1,000,000 in value backing the tokens. Second, physical gold reserves, built from one-third of monthly NOI deposited into the gold storage account, alongside one-third deposited into the real estate reserve account. That dual backing — real estate first, then gold — is the core of the model.</p></details>
+            <details><summary>Is there a minimum or maximum buy-in?</summary><p>No — there is no minimum or maximum buy-in. This page does not collect money — contact Project Nimble directly at Info@ProjectNimble.US or 561-984-4565 to enquire.</p></details>
+            <details><summary>What is the presale price and how many tokens are available?</summary><p>The presale price is $0.01 per token, with 50 million tokens available at presale from the fixed 500 million supply. It is an early-adopter incentive, and presale proceeds fund Project Nimble's startup and operating costs only. Once those 50 million tokens are sold, the presale window closes and the price goes to $0.50 per token. As an illustrative example only of the price maths: $1 million at $0.01 = 100 million Nimble tokens. That example is not a buy-in amount, tier, minimum, or maximum.</p></details>
             <details><summary>How many tokens are there — will more be created?</summary><p>500 million (N), fixed. No additional tokens will ever be minted. The stated allocation is 78% investors (390M), 10% founder (50M), 5% team (25M), 4% partnership (20M) and 3% pre-seed (15M).</p></details>
-            <details><summary>Where does the rental income go?</summary><p>Net operating income (NOI) is split one-third each to real estate reserves, gold backing, and platform operations, according to Project Nimble.</p></details>
-            <details><summary>Does holding tokens give me equity or a share of profits?</summary><p>No. Holding tokens does not provide company equity, profit participation, dividends, or claims on company revenue.</p></details>
+            <details><summary>Where does the rental income go?</summary><p>Net operating income (NOI) is split one-third each to the gold storage account, the real estate reserve account, and the Nimble platform for operations. The gold storage and real estate reserve thirds are deposited monthly and form ongoing backing for the tokens; the platform third funds operations.</p></details>
+            <details><summary>Does holding tokens give me equity or a share of profits?</summary><p>No. (N) is a utility and settlement instrument for ecosystem liquidity, platform usage, and access to platform services, including property acquisition workflows, settlement mechanisms, and collateralizing operational functions. Holding (N) does not convey equity, company profit participation, dividends, or claims on company revenues.</p></details>
           </div>
         </div>
 
@@ -513,11 +515,11 @@ footer p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.6;max-width:64
               <a class="mail" href="mailto:Info@ProjectNimble.US">✉ &nbsp;Info@ProjectNimble.US</a>
               <a class="tel" href="tel:+15619844565">☎ &nbsp;561-984-4565</a>
             </div>
-            <p style="font-size:13px;margin-top:18px">Website: projectnimble.us &nbsp;·&nbsp; Audience: capital investors &nbsp;·&nbsp; Buy-in: no stated minimum or maximum</p>
+            <p style="font-size:13px;margin-top:18px">Website: projectnimble.us &nbsp;·&nbsp; Audience: capital investors &nbsp;·&nbsp; Buy-in: no minimum or maximum</p>
           </div>
           <div style="margin-top:16px;border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--surface)">
             <h3 style="margin:0 0 8px;font-size:16px">Sell-sheet summary — take this with you</h3>
-            <p style="margin:0;font-size:14px;color:var(--ink-2);line-height:1.65"><strong style="color:var(--ink)">Model:</strong> Real estate + gold, dual-backed, on blockchain.<br><strong style="color:var(--ink)">Acquisitions:</strong> Multifamily portfolios, $5M–$100M, 100% equity, debt-free.<br><strong style="color:var(--ink)">Supply:</strong> 500M (N) fixed — 78 / 10 / 5 / 4 / 3. No additional tokens will ever be minted.<br><strong style="color:var(--ink)">Presale:</strong> $0.01 per token · 50M tokens available at presale · Proceeds fund startup and operating costs · 4% filled as stated · Buy-in: no stated minimum or maximum.<br><strong style="color:var(--ink)">Illustrative example:</strong> $1 million at $0.01 = 100 million Nimble tokens (price maths only).<br><strong style="color:var(--ink)">NOI:</strong> One-third each — real estate reserves · gold backing · platform operations.<br><strong style="color:var(--ink)">Holding tokens:</strong> Does not provide company equity, profit participation, dividends, or claims on company revenue.<br>Print this page (Ctrl / Cmd + P) to keep it as a one-page reference.</p>
+            <p style="margin:0;font-size:14px;color:var(--ink-2);line-height:1.65"><strong style="color:var(--ink)">Model:</strong> Real estate + gold, dual-backed, on blockchain.<br><strong style="color:var(--ink)">Acquisitions:</strong> Multifamily portfolios, $5M–$100M, 100% equity, debt-free.<br><strong style="color:var(--ink)">Supply:</strong> 500M (N) fixed — 78 / 10 / 5 / 4 / 3. No additional tokens will ever be minted.<br><strong style="color:var(--ink)">Presale:</strong> $0.01 per token · 50M tokens available at presale · Early-adopter incentive · Then $0.50 per token after the 50M are sold · Proceeds fund startup and operating costs only · 4% filled · Buy-in: no minimum or maximum.<br><strong style="color:var(--ink)">Backing:</strong> First, 100% owned real estate — $1,000,000 property value = $1,000,000 backing. Second, gold reserves built from monthly NOI deposits.<br><strong style="color:var(--ink)">Illustrative example:</strong> $1 million at $0.01 = 100 million Nimble tokens (price maths only).<br><strong style="color:var(--ink)">NOI:</strong> One-third each — gold storage account · real estate reserve account · Nimble platform for operations. Gold and real estate reserve thirds are monthly NOI deposits that back the tokens.<br><strong style="color:var(--ink)">Holding tokens:</strong> (N) is a utility and settlement instrument for ecosystem liquidity, platform usage and platform services. Holding (N) does not convey equity, company profit participation, dividends, or claims on company revenues.<br>Print this page (Ctrl / Cmd + P) to keep it as a one-page reference.</p>
           </div>
         </div>
       </div>
