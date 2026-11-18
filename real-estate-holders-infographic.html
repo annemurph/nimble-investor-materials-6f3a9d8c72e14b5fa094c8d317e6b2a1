@@ -42,16 +42,35 @@
     display:flex;
     align-items:flex-start;
     justify-content:center;
-    padding:20px 12px 28px;
+    padding:24px 16px 32px;
   }
+  main{width:min(100%, 1080px); margin:0 auto}
+
+  /* Toolbar — page chrome only, not part of the graphic */
+  .toolbar{
+    width:min(100%, 1080px);
+    display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    margin-bottom:12px;
+  }
+  .toolbar-note{font-size:14px; font-weight:500; letter-spacing:.02em; color:var(--ink-2)}
+  @media (prefers-color-scheme: dark){ .toolbar-note{color:#c2ccd3} }
+  .dl-btn{
+    min-height:44px; padding:10px 18px; border-radius:999px;
+    border:1px solid var(--ink); background:var(--ink); color:#fff;
+    font-family:var(--sans); font-size:14px; font-weight:600; letter-spacing:.02em; cursor:pointer;
+  }
+  .dl-btn:active{transform:translateY(1px)}
+  .dl-btn:disabled{opacity:.6; cursor:wait}
+  .dl-status{font-size:13px; color:var(--ink-2); min-height:18px; width:min(100%, 1080px); margin-bottom:10px}
+  @media (prefers-color-scheme: dark){ .dl-status{color:#c2ccd3} }
   @media (prefers-color-scheme: dark){
     body{background:#1c1e22}
   }
 
-  /* ---------- POSTER : cropped to content, no fixed portrait ratio ---------- */
+  /* ---------- POSTER : 1080 wide, cropped to content, no fixed portrait ratio ---------- */
   .poster{
     container-type:inline-size;
-    width:min(100%, 640px);
+    width:min(100%, 1080px);
     background:var(--paper);
     border:1.5px solid var(--ink);
     box-shadow:0 14px 34px rgba(19,26,31,.10);
@@ -173,7 +192,7 @@
   .pillar p{margin:.5cqw 0 0; font-size:1.55cqw; line-height:1.5; font-weight:400; letter-spacing:0; color:var(--ink-2)}
 
   .format-note{
-    width:min(100%, 640px);
+    width:min(100%, 1080px);
     margin:14px auto 0;
     text-align:center;
     font-size:13px; line-height:1.5; color:#5b6472;
@@ -188,7 +207,13 @@
 <body>
 
 <main>
-  <article class="poster" aria-label="Project Nimble poster for real estate holders with 20 or more units">
+  <div class="toolbar">
+    <div class="toolbar-note">1080 wide &middot; Cropped to content &middot; Sized for social media</div>
+    <button class="dl-btn" id="dlBtn" type="button">Download PNG — 1080 wide</button>
+  </div>
+  <div class="dl-status" id="dlStatus" aria-live="polite"></div>
+
+  <article class="poster" id="poster" aria-label="Project Nimble poster for real estate holders with 20 or more units">
     <div class="rule" aria-hidden="true"></div>
     <div class="inner">
 
@@ -269,5 +294,37 @@
   <p class="format-note">Cropped to content &middot; sized for social media</p>
 </main>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+  (function(){
+    var btn = document.getElementById('dlBtn');
+    var status = document.getElementById('dlStatus');
+    var poster = document.getElementById('poster');
+    if (!btn || !poster) return;
+    btn.addEventListener('click', function(){
+      if (typeof html2canvas === 'undefined') {
+        status.textContent = 'Download could not start — please take a screenshot instead.';
+        return;
+      }
+      status.textContent = 'Preparing your PNG…';
+      btn.disabled = true;
+      var w = poster.offsetWidth || 1080;
+      var scale = 1080 / w;
+      html2canvas(poster, { scale: scale, backgroundColor: '#fbfcfd', useCORS: true, logging: false }).then(function(canvas){
+        var a = document.createElement('a');
+        a.download = 'project-nimble-real-estate-holders.png';
+        a.href = canvas.toDataURL('image/png');
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        status.textContent = 'Downloaded — 1080 wide PNG, ready to post.';
+        btn.disabled = false;
+      }).catch(function(){
+        status.textContent = 'Download failed — please take a screenshot instead.';
+        btn.disabled = false;
+      });
+    });
+  })();
+</script>
 </body>
 </html>
